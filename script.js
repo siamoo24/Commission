@@ -265,15 +265,15 @@ window.onload = function() {
     
     //Q
     const slideshow_Q = document.getElementById('Q');
-    SlideshowFunc( '/Image/sample/Q/', data.slideshow_Q_imgs,'#Q', slideshow_Q);
+    SlideshowFunc( 'Image/sample/Q/', data.slideshow_Q_imgs,'#Q', slideshow_Q);
     
     //Q插
     const slideshow_Q_art = document.getElementById('Q_art');
-    SlideshowFunc( '/Image/sample/Q_art/', data.slideshow_Q_art_imags, '#Q_art', slideshow_Q_art);
+    SlideshowFunc( 'Image/sample/Q_art/', data.slideshow_Q_art_imags, '#Q_art', slideshow_Q_art);
     
     //其他
     const slideshow_Other = document.getElementById('Other');
-    SlideshowFunc( '/Image/sample/Other/', data.slideshow_Other_imgs, '#Other', slideshow_Other);
+    SlideshowFunc( 'Image/sample/Other/', data.slideshow_Other_imgs, '#Other', slideshow_Other);
 
     //Waterflow
     const left = document.getElementById("water-left");

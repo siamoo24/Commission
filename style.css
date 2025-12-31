@@ -1,0 +1,484 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+ * HTML content. To learn how to do something, just try searching Google for questions like
+ * "how to change link color." 
+ */
+ 
+ @font-face {
+    font-family: "Huninn";
+    src: url("/UoqMunThenKhung-Regular.ttf") format("truetype");
+}
+
+
+/*#A3485A;   /*淺櫻桃*/
+body {
+  padding: 24px;
+  color: #F5DAA7;  /*鵝黃*/
+  /*background-color: #A3485A;   /*淺櫻桃*/
+  /*font-family: "Noto Sans TC", sans-serif;*/
+  font-family: "Huninn", sans-serif;
+  background-image: url('/Image/BG.png'); 
+  /*background-size: cover;    /* 讓圖片覆蓋整個頁面 */
+  background-repeat: repeat; /* 重複圖片 */
+}
+
+i {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*POPUP------------------------------------------------------*/
+.popupTable{
+    border-collapse: collapse;
+    padding: 10px;
+    border: none;
+    /*border: 1px solid #F5DAA7;  /*鵝黃*/
+    border-radius: 12px;
+    background-color: rgba(245, 218, 168, 0.5);
+    table-layout: fixed;
+    width: 80vw;               
+}
+.popupTable td, .popupTable th {
+    border:  0.5px solid #977C00;       /* 內部分隔線綠色 */
+    /*padding: 10px;*/
+    border-left: none;             /* 無垂直線 */
+    border-right: none;            /* 無垂直線 */
+}
+
+
+/* 置頂導覽列 -----------------------------------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(86, 21, 48, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  color: #EE6983;   /*淺粉桃*/
+  margin: 0;
+}
+
+.nav-links {     
+  display: flex;
+  gap: 20px;
+  transition: all 0.8s ease; /* 動畫時間與曲線 */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #EE6983;   /*淺粉桃*/
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #F5DAA7;  /*鵝黃*/
+}
+
+
+
+/* 表格  ---------------------------------------*/
+
+table {
+  table-layout: auto;
+}
+
+table tr {
+  border-bottom: 0.5px solid ; 
+}
+
+table th {
+  width: 30%; 
+}
+
+table td {
+  font-size: 14px;  /* 內文縮小 */
+  width: 70%; 
+}
+
+td, th {
+  padding: 8px;
+  vertical-align: middle;
+  max-height: none;
+}
+
+
+
+/*小視窗介面 ----------------------------------------*/
+
+
+.card {
+  padding: 20px;
+  min-width: 75%;
+  height: auto;
+  color: #F5DAA7;  /*鵝黃*/
+  margin-bottom: 32px;
+  border-radius: 12px;
+  background-color: rgba(86, 21, 48, 0.8);
+  /*background-color: #842A3B;   /*黑櫻桃*/
+  box-shadow: 1 4px 8px #A3485A;   /*淺櫻桃*/
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.SNS{
+  width: 75%;     /* 預設桌面 / 平板 */
+  margin: 0 auto;  /* 置中 */
+  margin-bottom: 32px;
+}
+
+.WaterFlow{
+  width: 75%;     /* 預設桌面 / 平板 */
+  margin: 0 auto;  /* 置中 */
+  margin-bottom: 32px;
+}
+
+.WaterFlow img {
+  width: 100%;
+  height:auto;
+  margin-bottom:10px;
+}
+
+.DetailBtn {
+  border: none;
+  border-radius: 12px;
+  background-color: #A3485A;   /*淺櫻桃*/
+  color: #F5DAA7;  /*鵝黃*/
+  padding:10px;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+/* 滑過效果 */
+.DetailBtn:hover {
+  background-color: #8c3c4e;   /* 深一點的櫻桃色 */
+  transform: scale(1.05);      /* 微微放大 */
+}
+
+/* 點擊效果 */
+.DetailBtn:active {
+  transform: scale(0.95);      /* 按下去的感覺 */
+  background-color: #7a3344;   /* 再深一點 */
+}
+
+.info-hover {
+  
+  display: flex;
+  flex-direction: column; /* 上下排列 */
+  align-items: center;    /* 水平置中 */  
+  justify-content: center; /* 垂直置中 */
+  
+  font-size: 14px;  /* 內文縮小 */
+  color: #F5DAA7;  /*鵝黃*/
+  
+  padding: 20px;
+  min-width: 10%;
+  height: 120px;
+  
+  margin-bottom: 32px;
+  border-radius: 12px;
+  background-color: rgba(86, 21, 48, 0.8);
+  /*background-color: #842A3B;   /*黑櫻桃*/
+  box-shadow: 1 4px 8px #A3485A;   /*淺櫻桃*/
+  border: none;
+}
+
+.info-hover i {
+    font-size: 25px; /* 保持 icon 的 fa-2x 不被覆蓋 */
+}
+
+.info-hover .hr-line{
+  display: block; 
+  width: 100%; 
+  height: 1px; 
+  background-color: #F5B9A8;  /*駝色*/ 
+  margin:5px;
+}
+
+
+.info-hover:hover {
+  background-color: rgba(108, 41, 63, 0.9);   
+  transform: scale(1.05);      /* 微微放大 */
+}
+
+/* 點擊效果 */
+.info-hover:active {
+  transform: scale(0.95);      /* 按下去的感覺 */
+  background-color: rgba(122, 51, 68, 0.95);   /* 再深一點 */
+}
+
+.notice-div {
+  margin-bottom:5px;
+  height:200px;
+  font-size: 14px; 
+}
+
+.notice-div i{
+  font-size: 40px; /* 保持 icon 的 fa-2x 不被覆蓋 */
+  transform: translateY(-10px);
+  
+}
+
+.notice-div span{
+  left:-6px;
+}
+
+/* --- 計算機選項樣式 --- */
+        
+        
+        /* 選項卡片樣式：用於價格區塊和圖片的互動 */
+        .option-card {
+            cursor: pointer;
+        }
+
+        /* 選中時的樣式：紅色背景 */
+        .selected {
+            background-color: #A3485A; /* 淺紅色背景 */
+            color: #F5DAA7;  /*鵝黃*/
+            font-weight: bold;
+        }
+        
+
+        /* 隱藏 Radio Button */
+        .option-card input[type="radio"] {
+            display: none;
+        }
+
+        #total_price_display {
+            margin-top: 20px; 
+            padding: 15px; 
+            font-size: 1.5em; 
+            font-weight: bold; 
+            background-color: #A3485A; /* 淺紅色背景 */
+            color: #F5DAA7;  /*鵝黃*/
+            text-align: center;
+        }
+
+        
+
+.modal {
+    display: none; /* 預設隱藏 */
+    position: fixed; /* 固定在視窗上 */
+    z-index: 1; /* 確保它在最上層 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 內容太多時允許滾動 */
+    background-color: rgba(0,0,0,0.4); /* 半透明黑色背景 (蒙版) */
+  }
+
+.modal-content {
+    color: #977C00;
+    background-color: #fefefe;
+    margin: 10% auto; /* 距離頂部 10%，水平居中 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* 寬度佔螢幕 80% */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+  }  
+.modal-content table { 
+  color: #561530;
+}
+  
+/* 關閉按鈕 */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 10px;   /* 距離右側 10px */
+  top: 10px;     /* 距離頂部 10px */
+  /*float: right;*/
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  
+/*試算表 --------------------------------------------*/
+.sheet {
+  position: relative;
+  min-width: 100%;
+  width: 100%;
+  /*max-width: 900px;*/
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;  /* 水平置中 */
+  align-items: center;      /* 垂直置中 */
+  height: 50vh;            /* 滿版高度 */
+}
+
+.sheet iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 輪播------------------------------------------------*/
+.slideshow {
+    min-width: 50%;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    /*Gemini*/
+    display: flex;
+    justify-content: center; /* 讓圖片在容器中水平置中 */
+    align-items: center; /* 讓圖片在容器中垂直置中 */
+}
+
+.slideshow img {
+    width: auto;
+    height: 90%;
+    position: absolute;
+    left: 200%;          /* 初始在右邊畫面外 */
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+    transition: left 0.5s ease-in-out; /* 滑動動畫 */
+}
+
+.slideshow .active {
+    /*left: 0;             /* 當前圖片滑入畫面 */
+    left: 50%;
+}
+
+/******************************************************/
+
+.purple-bg{
+  background-color: rgba(80, 25, 62, 0.8);
+}
+
+.ban{
+  color:rgba(238, 105, 131, 0.8);
+  position: relative; /* 必須有 relative 才能偏移 */
+  bottom: 5px;
+}
+
+
+.icon {
+  width: auto;
+  height: 150px;   /**/
+}
+
+.titleIcon {
+  width: auto;
+  height: 20px;   /**/
+  vertical-align: middle;
+}
+
+.NOmrg {
+  margin: 0;
+  line-height: 1.5;  /* 調整成你要的緊密程度 */
+}
+
+/* 手機端導欄行 --------------------------------------*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #EE6983;   /*淺粉桃*/
+  border-radius: 2px;
+}
+
+/* 手機小螢幕優化 */
+@media (max-width: 576px) {
+    .nav-links {
+        /* 保持 position, top, left, width, background-color, flex-direction 等不變 */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(86, 21, 48, 0.9);
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 0; /* 移除 padding-top/bottom，改用 max-height 控制高度 */
+
+        /* ✨ 動畫關鍵：初始狀態 */
+        display: flex; /* 保持 flex 以允許內部元素佈局 */
+        overflow: hidden; /* 隱藏超出 max-height 的內容 */
+        max-height: 0; /* 隱藏菜單 */
+        opacity: 0; /* 初始透明度為 0 (淡入效果) */
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-in; /* 分開設置過渡效果 */
+    }
+
+    .nav-links.show {
+        max-height: 500px; 
+        opacity: 1; 
+    }
+    
+    /* 你的其他樣式保持不變 */
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .sheet {
+      padding-bottom: 75%; 
+    }
+    /*小視窗介面 ----------------------------------------*/
+
+    .card {
+    padding: 20px;
+    min-width: 90%;
+    height: auto;
+    color: #F5DAA7;  /*鵝黃*/
+    margin-bottom: 32px;
+    border-radius: 12px;
+    
+    background-color: rgba(86, 21, 48, 0.8);
+    box-shadow: 0 4px 8px #A3485A;   /*淺櫻桃*/
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+    overflow: hidden;
+  }
+  
+  .WaterFlow {
+    width: 95%;   /* 手機寬度改成 90vw */
+  }
+  .SNS{
+    width: 95%;   /* 手機寬度改成 90vw */
+  }
+  
+
+}
+
+

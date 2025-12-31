@@ -16,7 +16,7 @@ body {
   /*background-color: #A3485A;   /*淺櫻桃*/
   /*font-family: "Noto Sans TC", sans-serif;*/
   font-family: "Huninn", sans-serif;
-  background-image: url('/Image/BG.png'); 
+  background-image: url('Image/BG.png'); 
   /*background-size: cover;    /* 讓圖片覆蓋整個頁面 */
   background-repeat: repeat; /* 重複圖片 */
 }

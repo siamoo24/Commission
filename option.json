@@ -23,6 +23,7 @@
   "slideshow_Q_art_imags":["250405.png", "250510.png", "250803.png"],
   "slideshow_Other_imgs":["251031.jpg", "251025.jpg", "251121.jpg","251004.jpg", "240717.jpg", "240624.jpg"],
   
-  "waterflow_LEFT": ["250201.jpg","240815.jpg","251031.jpg","251004.jpg"]
-  
+  "waterflow_LEFT": ["250201.jpg", "240815.jpg", "251031.jpg", "251004.jpg"],
+  "waterflow_RIGHT": ["251130.jpg", "250520.jpg", "250101.jpg", "251025.jpg","250302.jpg"]
+   
 }

@@ -1,0 +1,28 @@
+{
+  "Q_price": "100~150，看複雜度",           
+  "Q_art_price": "400~500，看複雜度",
+  
+  "Full_18_price" : "1500",
+  "full_18_open" : "false",
+  
+  "noise_price" : "50",
+  "clean_price" : "150",
+  
+  "top_price" : "100",
+  "mid_price" : "200",
+  "bot_price" : "250",
+  
+  "empty_price": "0",
+  "skin_price" : "50",
+  "gray_price" : "50",
+  "dot_price"  : "100",
+  "simple_price"  : "200",
+  "complex_price"  : "300",
+  
+  "slideshow_Q_imgs":['img01.png', 'img02.png', 'img03.png', 'img04.png'],
+  "slideshow_Q_art_imags":['250405.png', '250510.png', '250803.png'],
+  "slideshow_Other_imgs":['251031.jpg', '251025.jpg', '251121.jpg','251004.jpg', '240717.jpg', '240624.jpg'],
+  
+  "waterflow_LEFT": ["250201.jpg","240815.jpg","251031.jpg","251004.jpg"]
+  
+}

@@ -274,7 +274,24 @@ window.onload = function() {
     //其他
     const slideshow_Other = document.getElementById('Other');
     SlideshowFunc( '/Image/sample/Other/', data.slideshow_Other_imgs, '#Other', slideshow_Other);
-  
+
+    //Waterflow
+    const left = document.getElementById("water-left");
+    const right = document.getElementById("water-right");
+    const waterflowPATH = "Image/sample/WaterFlow/"
+    
+    data.waterflow_LEFT.forEach(fileName => {
+      const img = document.createElement("img");
+      img.src = waterflowPATH+fileName;
+      left.appendChild(img);
+    });
+
+    data.waterflow_RIGHT.forEach(fileName => {
+      const img = document.createElement("img");
+      img.src = waterflowPATH+fileName;
+      right.appendChild(img);
+    });
+    
     Q_price = data.Q_price;
     Q_art_price = data.Q_art_price;
       

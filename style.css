@@ -19,6 +19,36 @@ body {
   background-image: url('Image/BG.png'); 
   /*background-size: cover;    /* 讓圖片覆蓋整個頁面 */
   background-repeat: repeat; /* 重複圖片 */
+  position: relative; /* 給 after 定位用 */
+}
+/* 閃亮星塵層 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+
+  background-size: 50px 50px, 80px 80px, 120px 120px;
+  animation: sparkle 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes sparkle {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 25px 25px, 40px 40px, 60px 60px;
+  }
+  100% {
+    background-position: 50px 50px, 80px 80px, 120px 120px;
+  }
 }
 
 i {
@@ -30,6 +60,7 @@ i {
   justify-content: center;
   align-items: center;
 }
+
 
 /*POPUP------------------------------------------------------*/
 .popupTable{
@@ -174,6 +205,11 @@ td, th {
 .DetailBtn:active {
   transform: scale(0.95);      /* 按下去的感覺 */
   background-color: #7a3344;   /* 再深一點 */
+}
+
+.sns-img {
+  height:95%;
+  max-width: auto;
 }
 
 .info-hover {
@@ -478,6 +514,34 @@ td, th {
     width: 95%;   /* 手機寬度改成 90vw */
   }
   
+
+  /*商品PARTIAL VIEW*/
+  .partial-view {
+    margin-top: 24px;
+    min-height: 150px;
+    border: 1px solid #FFC1E0;
+    padding: 16px;
+    overflow: hidden;
+
+    opacity: 0;          /* 初始透明 */
+    transform: translateY(-20px); /* 初始往上偏移 */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .partial-view.show {
+    opacity: 1;
+    transform: translateY(0); /* 滑下到正常位置 */
+  }
+
+  .partial-content {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .partial-content.show {
+    opacity: 1;
+  }
+
 
 }
 

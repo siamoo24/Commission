@@ -13,7 +13,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/navbarStyle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/modalStyle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/calculateStyle.css" rel="stylesheet" type="text/css" media="all">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPPFCC0KFY"></script>
@@ -111,32 +114,41 @@
     <div id="Goods">
     <h4 class=" center" > <img src="Image/Title.png" class="titleIcon">&nbsp;委託項目 </h4>
     <hr  class=" center" style="text-align: center; min-width:70%;max-width: fit-content; margin-left: auto; margin-right: auto;" />
+      <p>點擊項目看詳細內容 </p>
 
         <div class="SNS" style="margin-bottom:32px; ">
           <!--第一橫排-->
           <div class="row "> 
           
-            <div class="col-4 center">
-              <button class="info-hover w-100 sns-card good-card">
+            <div class="col-6 center">
+              <button class="info-hover w-100 sns-card good-card "id="partial-Q:Q" style="height: 150px">
                 <img src="Image/sample/Q/img01.png" class="sns-img"/>
                 <span class="hr-line " ></span>
                 <h6 class="sns-title" style="font-size: 12px;">Q版全身</h6>     
               </button>
             </div>
 
-            <div class="col-4 center">
-              <button class="info-hover w-100 sns-card good-card">
+            <div class="col-6 center">
+              <button class="info-hover w-100 sns-card good-card "id="partial-Q:Q_art" style="height: 150px">
                 <img src="Image/sample/Q_art/260109.png" class="sns-img"/>
                 <span class="hr-line " ></span>
                 <h6 class="sns-title" style="font-size: 12px;">Q版插圖</h6>     
               </button>
             </div>
 
-            <div class="col-4 center">
-              <button class="info-hover w-100 sns-card good-card">
+            <div class="col-6 center">
+              <button class="info-hover w-100 sns-card good-card "id="partial-Q:Other" style="height: 150px">
                 <img src="Image/sample/Other/251121.jpg" class="sns-img"/>
                 <span class="hr-line " ></span>
                 <h6 class="sns-title" style="font-size: 12px;">自由項目</h6>     
+              </button>
+            </div>
+
+            <div class="col-6 center">
+              <button class="info-hover w-100 sns-card good-card "id="partial-Q:Full_18" style="height: 150px">
+                <img src="Image/apple.png" class="sns-img"/>
+                <span class="hr-line " ></span>
+                <h6 class="sns-title" style="font-size: 12px;">R18滿版驚喜包</h6>     
               </button>
             </div>
 
@@ -145,157 +157,214 @@
 
 
          <!-- 局部內容顯示區 -->
-      <div id="partialView" style="margin-top:24px; min-height:150px; border:1px solid #FFC1E0; padding:16px; display:none;">
-        <!-- JS 點擊按鈕後會把內容塞進來 -->
+      <div id="partialView" class="partial-view">
+        <!-- partial 會插進來 -->
       </div>
+
     </div>
 
    
 
-    <!--項目-->
-    <h4 class=" center" id="Goods"> <img src="Image/Title.png" class="titleIcon">&nbsp;委託項目 </h4>
-    <hr  class=" center" style="text-align: center; min-width:70%;max-width: fit-content; margin-left: auto; margin-right: auto;" />
     
-    <!--Q版-->
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6 slideshow" id="Q"></div>
-        <div class="col-md-6 ">
-        
-          <h4 style="color:#FFC1E0">Q版全身</h4> <hr/><br />
-          <table style="width: 100%; border-collapse: collapse; border-bottom: 2px solid ;">
-            <tr>  <th >價格</th>  <td id="Q_price"></td>  </tr>
-            <tr>  <th >工期</th>  <td >依排單+7天</td>  </tr>
-            <tr>  <th >流程</th>  <td >
-                討論 <i class="fa-solid fa-arrow-right"></i>
-                草稿 <i class="fa-solid fa-arrow-right"></i>
-                修改 <i class="fa-solid fa-arrow-right"></i>
-                線稿 <i class="fa-solid fa-arrow-right"></i>
-                上色 <i class="fa-solid fa-arrow-right"></i>
-                交稿 
-            </td>  </tr>
-            <tr>  <th >圖檔</th>  <td >1000x1000&nbsp;&nbsp;350dpi</td>  </tr>
-            <tr>  <th >成品</th>  <td > 無浮水印圖檔*1&nbsp;+&nbsp;加浮水印圖檔*1</td>  </tr>
-            <tr>  <th >其他</th>  <td > 
-                會拿去做委託範例 <i class="fa-solid fa-apple-whole" ></i> <br/>
-                需修改時希望能一次提出 <i class="fa-solid fa-lemon" ></i><br/>
-            </td>  </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-    
-    <!--Q版插圖-->
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6 slideshow" id="Q_art"></div>
-        <div class="col-md-6 ">
-        
-          <h4 style="color:#FFC1E0">Q版插圖</h4> <hr/><br />
-          <table style="width: 100%; border-collapse: collapse; border-bottom: 2px solid ;">
-            <tr>  <th >價格</th>  <td id="Q_art_price"></td>  </tr>
-            <tr>  <th >工期</th>  <td >依排單+7~14天</td>  </tr>
-            <tr>  <th >流程</th>  <td >
-                討論 <i class="fa-solid fa-arrow-right"></i>
-                草稿 <i class="fa-solid fa-arrow-right"></i>
-                修改 <i class="fa-solid fa-arrow-right"></i>
-                線稿 <i class="fa-solid fa-arrow-right"></i>
-                上色 <i class="fa-solid fa-arrow-right"></i>
-                交稿 
-            </td>  </tr>
-            <tr>  <th >圖檔</th>  <td >1500x1500&nbsp;&nbsp;350dpi</td>  </tr>
-            <tr>  <th >成品</th>  <td > 無浮水印圖檔*1&nbsp;+&nbsp;加浮水印圖檔*1</td>  </tr>
-            <tr>  <th >其他</th>  <td > 
-                會拿去做委託範例 <i class="fa-solid fa-apple-whole" ></i> <br/>
-                需修改時希望能一次提出 <i class="fa-solid fa-lemon" ></i><br/>
-            </td>  </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-    
-    <!--自由項目-->
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6 slideshow" id="Other"></div>
-        
-        <div class="col-md-6 ">
-        
-          <h4 style="color:#FFC1E0">自由項目</h4> <hr/><br />
-          <table style="width: 100%; border-collapse: collapse; border-bottom: 2px solid ;">
-            <tr>  <th >價格</th>  <td ><button class="DetailBtn" id="OtherBtn"> 查看詳情<i class="fa-solid fa-apple-whole" ></i> </button></td>  </tr>
-            <tr>  <th >工期</th>  <td >依排單+7~14天，看複雜度</td>  </tr>
-            <tr>  <th >流程</th>  <td >
-                討論 <i class="fa-solid fa-arrow-right"></i>
-                草稿 <i class="fa-solid fa-arrow-right"></i>
-                修改 <i class="fa-solid fa-arrow-right"></i>
-                線稿 <i class="fa-solid fa-arrow-right"></i>
-                上色 <i class="fa-solid fa-arrow-right"></i>
-                交稿 
-            </td>  </tr>
-            <tr>  <th >圖檔</th>  <td >3000x3000&nbsp;&nbsp;350dpi</td>  </tr>
-            <tr>  <th >成品</th>  <td > 無浮水印圖檔*1&nbsp;+&nbsp;加浮水印圖檔*1</td>  </tr>
-            <tr>  <th >其他</th>  <td > 
-                會拿去做委託範例 <i class="fa-solid fa-apple-whole" ></i> <br/>
-                需修改時希望能一次提出 <i class="fa-solid fa-lemon" ></i><br/>
-            </td>  </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-    
-    <!--R18-->
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
-          <img src="Image/apple.png" style="width: 400px; height: 400px;">
-        </div>
-        
-        <div class="col-md-6 ">
-        
-          <h4 style="color:#FFC1E0">R18滿版驚喜包</h4> <hr/><br />
-          
-          <table style="width: 100%; border-collapse: collapse; border-bottom: 2px solid ;">
-            <tr>  <th >價格</th>  <td id="Full_18_price"></td>  </tr>
-            <tr>  <th >工期</th>  <td >依排單+14天</td>  </tr>
-            <tr>  <th >流程</th>  <td >
-                討論 <i class="fa-solid fa-arrow-right"></i>
-                草稿 <i class="fa-solid fa-arrow-right"></i>
-                線稿 <i class="fa-solid fa-arrow-right"></i>
-                上色 <i class="fa-solid fa-arrow-right"></i>
-                交稿 
-            </td>  </tr>
-            <tr>  <th >圖檔</th>  <td >3000x3000&nbsp;&nbsp;350dpi</td>  </tr>
-            <tr>  <th >成品</th>  <td > 無浮水印圖檔*1&nbsp;+&nbsp;加浮水印圖檔*1</td>  </tr>
-            <tr>  <th >其他</th>  <td > 
-                會詢問意見再放入委託範例 <i class="fa-solid fa-apple-whole" ></i> <br/>
-                無修改一鍵出圖 <i class="fa-solid fa-lemon" ></i><br/>
-                <p style="margin: 0; color: white;"><b>目前為投單挑設制</b><i class="fas fa-feather" ></i></p><br/>
-            </td>  </tr>
-          </table>
-        
-          <div class="row" style="padding-top:10px">
-          
-              <div class="col-md-6 col-sm-6 col-6"> 
-                  <button class="DetailBtn" id="RBtn"> 
-                      查看詳情 <i class="fa-solid fa-apple-whole" ></i> 
-                  </button> 
-                  <div style="font-size: 12px;"><i class="fa-solid fa-triangle-exclamation"></i>內有範例圖</div>
-              </div>
-              
-              <div class="col-md-6 col-sm-6 col-6" id="full_18_close" >
-                  <button class="DetailBtn" style="pointer-events:none; opacity:0.6;">
-                      暫停接委 <i class="fa-solid fa-file-lines"></i>
-                  </button>
-              </div>
+    <!--自由項目彈跳視窗頁  -->
+    <div id="OtherModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('OtherModal').style.display='none'">&times;</span>
 
-              <div class="col-md-6 col-sm-6 col-6" id="full_18_open" >
-              <button class="DetailBtn" id="R18FormBtn" Onclick="window.open('https://forms.gle/8nVergaNxa3ZUTRq6', '_blank')"> 表單填寫 <i class="fa-solid fa-file-lines" ></i> </button> </div>
-          </div>
-        
+            <h3>🎨 自由項目報價計算機</h3>
+            <p class="NOmrg"> 採用累加方式去做計價</p>
+            <p class="NOmrg"> 請點擊價格區塊或範例圖片來選取項目。</p>
+            <p class="NOmrg"><i class="fa-solid fa-triangle-exclamation"></i> 複雜設定會額外加價</p>
+            
+            <hr />
+
+            <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望線稿風格</p>
+            <table class="popupTable option-card">
+                <tr>
+                    <th>線稿</th>
+                    <td style="width:45%" id="noise_tit" onclick="selectNoise()">有雜線</td>
+                    <td style="width:45%" id="clean_tit" onclick="selectClean()">無雜線</td>
+                </tr>
+
+                <tr>
+                    <th>價格</th>
+                    <td id="noise_div" onclick="selectNoise()">
+                        <div  >
+                            <input type="radio" name="style_line"  id="radio_noise_div" checked>
+                            <i class="fa-solid fa-plus" id="noise_price"></i> 
+                        </div>
+                    </td>
+                    <td id="clean_div" onclick="selectClean()">
+                        <div  >
+                            <input type="radio" name="style_line" id="radio_clean_div">
+                            <i class="fa-solid fa-plus" id="clean_price"></i> 
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>範例</th>
+                    <td id="noise_img" onclick="selectNoise()">
+                        <img src="Image/sample/A.jpg" style="width:25vw;height:auto" onclick="selectNoise()">
+                    </td>
+                    <td id="clean_img" onclick="selectClean()">
+                        <img src="Image/sample/B.jpg" style="width:25vw;height:auto" onclick="selectClean()">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>說明</th>
+                    <td id="noise_exp" onclick="selectNoise()">
+                        起伏有些不定，簡單設定有可能拿到無雜線，要賭<i class="fa-solid fa-dice"></i></td>
+                    <td id="clean_exp" onclick="selectClean()">一定會是無雜線版本</td>
+                </tr>
+            </table>
+
+            <p></p>
+            <p></p>
+            
+            <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望繪製範圍</p>
+            <table class="popupTable option-card">
+                <tr>
+                    <th>範圍</th>
+                    <td style="width:30%" id="top_tit">鎖骨以上</td>
+                    <td style="width:30%" id="mid_tit">腰部以上</td>
+                    <td style="width:30%" id="bot_tit">膝蓋以上</td>
+                </tr>
+
+                <tr>
+                    <th>價格</th>
+                    <td id="top_div" onclick="selectTop()">
+                        <div>
+                            <input type="radio" name="style_range" id="radio_top_div" checked>
+                            <i class="fa-solid fa-plus" id="top_price"></i> 
+                        </div>
+                    </td>
+                    <td id="mid_div" onclick="selectMid()">
+                        <div>
+                            <input type="radio" name="style_range"  id="radio_mid_div">
+                            <i class="fa-solid fa-plus" id="mid_price"></i> 
+                        </div>
+                    </td>
+                    <td id="bot_div" onclick="selectBot()">
+                        <div>
+                            <input type="radio" name="style_range"  id="radio_bot_div">
+                            <i class="fa-solid fa-plus" id="bot_price"></i> 
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>範例</th>
+                    <td id="top_img" onclick="selectTop()"> <img src="Image/sample/C.jpg" style="width:100%;height :auto" ></td>
+                    <td id="mid_img" onclick="selectMid()"><img src="Image/sample/D.jpg" style="width:100%;height:auto" ></td>
+                    <td id="bot_img" onclick="selectBot()"><img src="Image/sample/E.jpg" style="width:100%;height:auto" ></td>
+                </tr>
+            </table>
+
+            <p></p>
+            <p></p>
+            
+            <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望上色方式</p>
+            <table class="popupTable option-card">
+                <tr>
+                    <th>方式</th>
+                    <td style="width:30%" id="empty_tit" onclick="selectEmpty()"> 無上色</td>
+                    <td style="width:30%" id="skin_tit" onclick="selectSkin()"> 膚、瞳、髮底色</td>
+                    <td style="width:30%" id="gray_tit" onclick="selectGray()"> 黑、灰、白底色</td>
+                </tr>
+
+                <tr>
+                    <th>價格</th>
+                    <td id="empty_div" onclick="selectEmpty()">
+                        <div>
+                            <input type="radio" name="style_color"  id="radio_empty_div" checked>
+                            <i class="fa-solid fa-plus" id="empty_price"></i> 
+                        </div>
+                    </td>
+                    <td id="skin_div" onclick="selectSkin()">
+                        <div>
+                            <input type="radio" name="style_color" id="radio_skin_div">
+                            <i class="fa-solid fa-plus" id="skin_price"></i> 
+                        </div>
+                    </td>
+                    <td id="gray_div" onclick="selectGray()">
+                        <div >
+                            <input type="radio" name="style_color" id="radio_gray_div">
+                            <i class="fa-solid fa-plus" id="gray_price"></i> 
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>範例</th>
+                    <td id="empty_img" onclick="selectEmpty()"><img src="Image/sample/F.jpg" style="width:100%;height:auto" ></td>
+                    <td id="skin_img" onclick="selectSkin()"><img src="Image/sample/G.jpg" style="width:100%;height:auto" ></td>
+                    <td id="gray_img" onclick="selectGray()"><img src="Image/sample/H.jpg" style="width:100%;height:auto" ></td>
+                </tr>
+            <!--</table>
+            
+            <table class="popupTable option-card">-->
+                <tr>
+                    <th>方式</th>
+                    <td style="width:30%" id="dot_tit" onclick="selectDot()">網點底色</td>
+                    <td style="width:30%" id="simple_tit" onclick="selectSimple()">簡單上色</td>
+                    <td style="width:30%" id="complex_tit" onclick="selectComplex()">複雜上色</td>
+                </tr>
+
+                <tr>
+                    <th>價格</th>
+                    <td id="dot_div" onclick="selectDot()">
+                        <div>
+                            <input type="radio" name="style_color" id="radio_dot_div">
+                            <i class="fa-solid fa-plus" id="dot_price"></i> 
+                        </div>
+                    </td>
+                    <td id="simple_div" onclick="selectSimple()">
+                        <div>
+                            <input type="radio" name="style_color" id="radio_simple_div">
+                            <i class="fa-solid fa-plus" id="simple_price"></i> 
+                        </div>
+                    </td>
+                    <td id="complex_div" onclick="selectComplex()">
+                        <div >
+                            <input type="radio" name="style_color" id="radio_complex_div">
+                            <i class="fa-solid fa-plus" id="complex_price"></i> 
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>範例</th>
+                    <td id="dot_img" onclick="selectDot()"><img src="Image/sample/I.jpg" style="width:100%;height:auto" ></td>
+                    <td id="simple_img" onclick="selectSimple()"><img src="Image/sample/J.jpg" style="width:100%;height:auto" ></td>
+                    <td id="complex_img" onclick="selectComplex()"><img src="Image/sample/K.jpg" style="width:100%;height:auto" ></td>
+                </tr>
+                
+                <tr>
+                    <th>說明</th>
+                    <td id="dot_exp" onclick="selectDot()"></td>
+                    <td id="simple_exp" onclick="selectSimple()">會上一層陰影</td>
+                    <td id="complex_exp" onclick="selectComplex()">最少有兩層陰影，有機率增加其他</td>
+                </tr>
+            </table>
+
+            <br/>
+            
+            <div id="total_price_display">
+                報價：0
+            </div>
+            <p class="NOmrg"> <i class="fa-solid fa-triangle-exclamation"></i>如果有其他小配件或增加Q版的要求也可以提出!</p>
+            <p class="NOmrg">     可以參考其他項目的價格 </p>
+            
+            
+
         </div>
-      </div>
     </div>
+
+
+    
+    
     
     
     <!--注意事項 PC端-->
@@ -455,201 +524,7 @@
       </div>
     </div>
     
-    <!--自由項目彈跳視窗頁  -->
-    <div id="OtherModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="document.getElementById('OtherModal').style.display='none'">&times;</span>
-
-        <h3>🎨 自由項目報價計算機</h3>
-        <p class="NOmrg"> 採用累加方式去做計價</p>
-        <p class="NOmrg"> 請點擊價格區塊或範例圖片來選取項目。</p>
-        <p class="NOmrg"><i class="fa-solid fa-triangle-exclamation"></i> 複雜設定會額外加價</p>
-        
-        <hr />
-
-        <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望線稿風格</p>
-        <table class="popupTable option-card">
-            <tr>
-                <th>線稿</th>
-                <td style="width:45%" id="noise_tit" onclick="selectNoise()">有雜線</td>
-                <td style="width:45%" id="clean_tit" onclick="selectClean()">無雜線</td>
-            </tr>
-
-            <tr>
-                <th>價格</th>
-                <td id="noise_div" onclick="selectNoise()">
-                    <div  >
-                        <input type="radio" name="style_line"  id="radio_noise_div" checked>
-                        <i class="fa-solid fa-plus" id="noise_price"></i> 
-                    </div>
-                </td>
-                <td id="clean_div" onclick="selectClean()">
-                    <div  >
-                        <input type="radio" name="style_line" id="radio_clean_div">
-                        <i class="fa-solid fa-plus" id="clean_price"></i> 
-                    </div>
-                </td>
-            </tr>
-            
-            <tr>
-                <th>範例</th>
-                <td id="noise_img" onclick="selectNoise()">
-                    <img src="Image/sample/A.jpg" style="width:25vw;height:auto" onclick="selectNoise()">
-                </td>
-                <td id="clean_img" onclick="selectClean()">
-                    <img src="Image/sample/B.jpg" style="width:25vw;height:auto" onclick="selectClean()">
-                </td>
-            </tr>
-            
-            <tr>
-                <th>說明</th>
-                <td id="noise_exp" onclick="selectNoise()">
-                    起伏有些不定，簡單設定有可能拿到無雜線，要賭<i class="fa-solid fa-dice"></i></td>
-                <td id="clean_exp" onclick="selectClean()">一定會是無雜線版本</td>
-            </tr>
-        </table>
-
-        <p></p>
-        <p></p>
-        
-        <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望繪製範圍</p>
-        <table class="popupTable option-card">
-            <tr>
-                <th>範圍</th>
-                <td style="width:30%" id="top_tit">鎖骨以上</td>
-                <td style="width:30%" id="mid_tit">腰部以上</td>
-                <td style="width:30%" id="bot_tit">膝蓋以上</td>
-            </tr>
-
-            <tr>
-                <th>價格</th>
-                <td id="top_div" onclick="selectTop()">
-                    <div>
-                        <input type="radio" name="style_range" id="radio_top_div" checked>
-                        <i class="fa-solid fa-plus" id="top_price"></i> 
-                    </div>
-                </td>
-                <td id="mid_div" onclick="selectMid()">
-                    <div>
-                        <input type="radio" name="style_range"  id="radio_mid_div">
-                        <i class="fa-solid fa-plus" id="mid_price"></i> 
-                    </div>
-                </td>
-                <td id="bot_div" onclick="selectBot()">
-                    <div>
-                        <input type="radio" name="style_range"  id="radio_bot_div">
-                        <i class="fa-solid fa-plus" id="bot_price"></i> 
-                    </div>
-                </td>
-            </tr>
-            
-            <tr>
-                <th>範例</th>
-                <td id="top_img" onclick="selectTop()"> <img src="Image/sample/C.jpg" style="width:100%;height :auto" ></td>
-                <td id="mid_img" onclick="selectMid()"><img src="Image/sample/D.jpg" style="width:100%;height:auto" ></td>
-                <td id="bot_img" onclick="selectBot()"><img src="Image/sample/E.jpg" style="width:100%;height:auto" ></td>
-            </tr>
-        </table>
-
-        <p></p>
-        <p></p>
-        
-        <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望上色方式</p>
-        <table class="popupTable option-card">
-            <tr>
-                <th>方式</th>
-                <td style="width:30%" id="empty_tit" onclick="selectEmpty()"> 無上色</td>
-                <td style="width:30%" id="skin_tit" onclick="selectSkin()"> 膚、瞳、髮底色</td>
-                <td style="width:30%" id="gray_tit" onclick="selectGray()"> 黑、灰、白底色</td>
-            </tr>
-
-            <tr>
-                <th>價格</th>
-                <td id="empty_div" onclick="selectEmpty()">
-                    <div>
-                        <input type="radio" name="style_color"  id="radio_empty_div" checked>
-                        <i class="fa-solid fa-plus" id="empty_price"></i> 
-                    </div>
-                </td>
-                <td id="skin_div" onclick="selectSkin()">
-                    <div>
-                        <input type="radio" name="style_color" id="radio_skin_div">
-                        <i class="fa-solid fa-plus" id="skin_price"></i> 
-                    </div>
-                </td>
-                <td id="gray_div" onclick="selectGray()">
-                    <div >
-                        <input type="radio" name="style_color" id="radio_gray_div">
-                        <i class="fa-solid fa-plus" id="gray_price"></i> 
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <th>範例</th>
-                <td id="empty_img" onclick="selectEmpty()"><img src="Image/sample/F.jpg" style="width:100%;height:auto" ></td>
-                <td id="skin_img" onclick="selectSkin()"><img src="Image/sample/G.jpg" style="width:100%;height:auto" ></td>
-                <td id="gray_img" onclick="selectGray()"><img src="Image/sample/H.jpg" style="width:100%;height:auto" ></td>
-            </tr>
-        <!--</table>
-        
-        <table class="popupTable option-card">-->
-            <tr>
-                <th>方式</th>
-                <td style="width:30%" id="dot_tit" onclick="selectDot()">網點底色</td>
-                <td style="width:30%" id="simple_tit" onclick="selectSimple()">簡單上色</td>
-                <td style="width:30%" id="complex_tit" onclick="selectComplex()">複雜上色</td>
-            </tr>
-
-            <tr>
-                <th>價格</th>
-                <td id="dot_div" onclick="selectDot()">
-                    <div>
-                        <input type="radio" name="style_color" id="radio_dot_div">
-                        <i class="fa-solid fa-plus" id="dot_price"></i> 
-                    </div>
-                </td>
-                <td id="simple_div" onclick="selectSimple()">
-                    <div>
-                        <input type="radio" name="style_color" id="radio_simple_div">
-                        <i class="fa-solid fa-plus" id="simple_price"></i> 
-                    </div>
-                </td>
-                <td id="complex_div" onclick="selectComplex()">
-                    <div >
-                        <input type="radio" name="style_color" id="radio_complex_div">
-                        <i class="fa-solid fa-plus" id="complex_price"></i> 
-                    </div>
-                </td>
-            </tr>
-            
-            <tr>
-                <th>範例</th>
-                <td id="dot_img" onclick="selectDot()"><img src="Image/sample/I.jpg" style="width:100%;height:auto" ></td>
-                <td id="simple_img" onclick="selectSimple()"><img src="Image/sample/J.jpg" style="width:100%;height:auto" ></td>
-                <td id="complex_img" onclick="selectComplex()"><img src="Image/sample/K.jpg" style="width:100%;height:auto" ></td>
-            </tr>
-            
-            <tr>
-                <th>說明</th>
-                <td id="dot_exp" onclick="selectDot()"></td>
-                <td id="simple_exp" onclick="selectSimple()">會上一層陰影</td>
-                <td id="complex_exp" onclick="selectComplex()">最少有兩層陰影，有機率增加其他</td>
-            </tr>
-        </table>
-
-        <br/>
-        
-        <div id="total_price_display">
-            報價：0
-        </div>
-        <p class="NOmrg"> <i class="fa-solid fa-triangle-exclamation"></i>如果有其他小配件或增加Q版的要求也可以提出!</p>
-        <p class="NOmrg">     可以參考其他項目的價格 </p>
-        
-        
-
-    </div>
-</div>
+    
     
     <!--R項目彈跳視窗頁  -->
     <div id="RModal" class="modal"> 
@@ -708,7 +583,9 @@
       <p> 最後更新日 : 2026/01/11</p>
     </footer>
     
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/partialView.js"></script>
+    <script src="/js/otherModal.js"></script>
   </body>
   
 </html>

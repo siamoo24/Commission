@@ -1,0 +1,30 @@
+/* --- 計算機選項樣式 --- */
+        
+        
+  /* 選項卡片樣式：用於價格區塊和圖片的互動 */
+  .option-card {
+      cursor: pointer;
+  }
+
+  /* 選中時的樣式：紅色背景 */
+  .selected {
+      background-color: #A3485A; /* 淺紅色背景 */
+      color: #F5DAA7;  /*鵝黃*/
+      font-weight: bold;
+  }
+  
+
+  /* 隱藏 Radio Button */
+  .option-card input[type="radio"] {
+      display: none;
+  }
+
+  #total_price_display {
+      margin-top: 20px; 
+      padding: 15px; 
+      font-size: 1.5em; 
+      font-weight: bold; 
+      background-color: #A3485A; /* 淺紅色背景 */
+      color: #F5DAA7;  /*鵝黃*/
+      text-align: center;
+  }

@@ -20,10 +20,10 @@
   "complex_price"  : "300",
   
   "slideshow_Q_imgs":["img01.png", "img02.png", "img03.png", "img04.png"],
-  "slideshow_Q_art_imags":["260109.png", "250405.png", "250510.png", "250803.png"],
-  "slideshow_Other_imgs":["251031.jpg", "251025.jpg", "251121.jpg","251004.jpg", "240717.jpg", "240624.jpg"],
+  "slideshow_Q_art_imgs":["260109.png", "250405.png", "250510.png", "250803.png"],
+  "slideshow_Other_imgs":["251228.jpg","251031.jpg",  "251121.jpg","251004.jpg", "240717.jpg", "251214.jpg"],
   
-  "waterflow_LEFT": ["250201.jpg", "251031.jpg"],
-  "waterflow_RIGHT": ["250801.jpg", "250520.jpg"]
+  "waterflow_LEFT": ["0.jpg", "1.jpg"],
+  "waterflow_RIGHT": ["2.jpg", "3.jpg"]
    
 }

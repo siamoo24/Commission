@@ -15,6 +15,15 @@
     
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPPFCC0KFY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QPPFCC0KFY');
+    </script>
   </head>
   
   <body style="text-align: center;" oncontextmenu="return false;">
@@ -37,34 +46,35 @@
  
     
     <div style="height:80px;"></div>
-    <!-- 關於 -->
-    
-    <h4 class=" center" id="Goods"> <img src="Image/Title.png" class="titleIcon">&nbsp;關於 </h4>
-    <hr  class=" center" style="text-align: center; min-width:70%;max-width: fit-content; margin-left: auto; margin-right: auto;" />
-   
-    <div class="card" id="about" style="margin-bottom:8px;">
-      
-      <div class="row">
-      
-        <div class="col-md-3">  
-          <img src="Image/HomeIcon.png" class="icon"><br/>
-        </div>
-        
-        <div class="col-md-9"><p></p>
-          <p>歡迎查看我的委託頁<i class="fa-solid fa-heart"></i></p>
-          <p id="test"></p>
-            
-          <p class="NOmrg">
-            喜歡畫漂亮小裙子<i class="fa-solid  fa-hat-wizard"></i><br/>
-            擅長畫比較暖色系的顏色<i class="fa-solid fa-palette"></i><br/>
-            常被Message吃訊息，所以不知道有私訊，<br/>我會盡量檢查&nbsp;TT
-          </p>
 
-        </div>
+    <!-- 關於 -->
+    <div>
+      <h4 class=" center" id="Goods"> <img src="Image/Title.png" class="titleIcon">&nbsp;關於 </h4>
+      <hr  class=" center" style="text-align: center; min-width:70%;max-width: fit-content; margin-left: auto; margin-right: auto;" />
+    
+      <div class="card" id="about" style="margin-bottom:8px;">
         
+        <div class="row">
+        
+          <div class="col-md-3">  
+            <img src="Image/HomeIcon.png" class="icon"><br/>
+          </div>
+          
+          <div class="col-md-9"><p></p>
+            <p>歡迎查看我的委託頁<i class="fa-solid fa-heart"></i></p>
+            <p id="test"></p>
+              
+            <p class="NOmrg">
+              喜歡畫漂亮小裙子<i class="fa-solid  fa-hat-wizard"></i><br/>
+              擅長畫比較暖色系的顏色<i class="fa-solid fa-palette"></i><br/>
+              常被Message吃訊息，所以不知道有私訊，<br/>我會盡量檢查&nbsp;TT
+            </p>
+
+          </div>
+          
+        </div>
       </div>
     </div>
-    
     
     <!-- SNS -->
     <div class="SNS" style="margin-bottom:32px; ">
@@ -97,6 +107,51 @@
     </div>
     
     
+    <!--項目 ver 2-->
+    <div id="Goods">
+    <h4 class=" center" > <img src="Image/Title.png" class="titleIcon">&nbsp;委託項目 </h4>
+    <hr  class=" center" style="text-align: center; min-width:70%;max-width: fit-content; margin-left: auto; margin-right: auto;" />
+
+        <div class="SNS" style="margin-bottom:32px; ">
+          <!--第一橫排-->
+          <div class="row "> 
+          
+            <div class="col-4 center">
+              <button class="info-hover w-100 sns-card good-card">
+                <img src="Image/sample/Q/img01.png" class="sns-img"/>
+                <span class="hr-line " ></span>
+                <h6 class="sns-title" style="font-size: 12px;">Q版全身</h6>     
+              </button>
+            </div>
+
+            <div class="col-4 center">
+              <button class="info-hover w-100 sns-card good-card">
+                <img src="Image/sample/Q_art/260109.png" class="sns-img"/>
+                <span class="hr-line " ></span>
+                <h6 class="sns-title" style="font-size: 12px;">Q版插圖</h6>     
+              </button>
+            </div>
+
+            <div class="col-4 center">
+              <button class="info-hover w-100 sns-card good-card">
+                <img src="Image/sample/Other/251121.jpg" class="sns-img"/>
+                <span class="hr-line " ></span>
+                <h6 class="sns-title" style="font-size: 12px;">自由項目</h6>     
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+
+         <!-- 局部內容顯示區 -->
+      <div id="partialView" style="margin-top:24px; min-height:150px; border:1px solid #FFC1E0; padding:16px; display:none;">
+        <!-- JS 點擊按鈕後會把內容塞進來 -->
+      </div>
+    </div>
+
+   
+
     <!--項目-->
     <h4 class=" center" id="Goods"> <img src="Image/Title.png" class="titleIcon">&nbsp;委託項目 </h4>
     <hr  class=" center" style="text-align: center; min-width:70%;max-width: fit-content; margin-left: auto; margin-right: auto;" />

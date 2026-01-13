@@ -349,3 +349,41 @@ window.onload = function() {
 }
 
 
+
+
+
+// 先選所有 sns-card 按鈕
+const buttons = document.querySelectorAll(".good-card");
+const partialView = document.getElementById("partialView");
+
+// 為每個按鈕加 click 事件
+buttons.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+
+    // 根據按鈕 index 或其他 data-屬性決定要顯示的內容
+    let content = "";
+    switch(index) {
+      case 0:
+        content = "<h3>Q版全身</h3><p>這裡可以放詳細介紹、圖片或其他 HTML 元素。</p>";
+        break;
+      case 1:
+        content = "<h3>Q版插圖</h3><p>這裡可以放插圖說明、預覽圖片或其他資料。</p>";
+        break;
+      case 2:
+        content = "<h3>自由項目</h3><p>這裡可以放自由項目內容。</p>";
+        break;
+      default:
+        content = "";
+    }
+
+    // 把內容放入 partialView 並顯示
+    partialView.innerHTML = content;
+    partialView.style.display = "block";
+    
+    // 可選：加個動畫淡入
+    partialView.style.opacity = 0;
+    setTimeout(() => { partialView.style.opacity = 1; }, 10);
+  });
+});
+
+

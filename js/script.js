@@ -68,7 +68,6 @@ function SlideshowFunc( folder, images, id, slideshow ) {
 // 0. LOADING 動畫
  window.addEventListener('load', () => {
     document.getElementById('preloader').style.display = 'none';
-    document.getElementById('mainContent').style.display = 'block';
   });
 
 

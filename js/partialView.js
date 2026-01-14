@@ -88,9 +88,10 @@ async function applyJsonData(key, scope, img_path) {
 }
 
 function FindSlideshow_parm(jsonKey){
+  var floder_base="../Image/sample/";
     if (jsonKey === "Q_price") {  
         return {
-            img_folder: "Image/sample/Q/",
+            img_folder: floder_base + "Q/",
             img_key: "slideshow_Q_imgs",
           
             div_id: "Q"
@@ -98,7 +99,7 @@ function FindSlideshow_parm(jsonKey){
     }
     else if (jsonKey === "Q_art_price") {  
         return {
-            img_folder: "Image/sample/Q_art/",
+            img_folder: floder_base+ "Q_art/",
             img_key: "slideshow_Q_art_imgs",
            
             div_id: "Q_art"
@@ -106,7 +107,7 @@ function FindSlideshow_parm(jsonKey){
     }
     else if (jsonKey === "Other_price") {  
         return {
-            img_folder: "Image/sample/Other/",
+            img_folder: floder_base + "Other/",
             img_key: "slideshow_Other_imgs",
             div_id: "Other"
         };

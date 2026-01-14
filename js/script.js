@@ -70,7 +70,17 @@ function SlideshowFunc( folder, images, id, slideshow ) {
 // 🚀 主要啟動區塊：等待 DOM 載入完成後執行所有初始化和事件綁定
 // -------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
- 
+
+  // 0. LOADING 動畫
+  const preloader = document.getElementById('preloader');
+  const mainContent = document.getElementById('mainContent');
+
+  // 隱藏預載動畫
+  preloader.style.display = 'none';
+  // 顯示網站內容
+  mainContent.style.display = 'block';
+
+  
   // 1. Menu 動畫/錨點跳轉
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', (event) => {

@@ -93,7 +93,7 @@ function FindSlideshow_parm(jsonKey){
   const folder_base = "Commission/Image/sample/";
     if (jsonKey === "Q_price") {  
         return {
-            img_folder: floder_base + "Q/",
+            img_folder: folder_base + "Q/",
             img_key: "slideshow_Q_imgs",
           
             div_id: "Q"
@@ -101,7 +101,7 @@ function FindSlideshow_parm(jsonKey){
     }
     else if (jsonKey === "Q_art_price") {  
         return {
-            img_folder: floder_base+ "Q_art/",
+            img_folder: folder_base+ "Q_art/",
             img_key: "slideshow_Q_art_imgs",
            
             div_id: "Q_art"
@@ -109,7 +109,7 @@ function FindSlideshow_parm(jsonKey){
     }
     else if (jsonKey === "Other_price") {  
         return {
-            img_folder: floder_base + "Other/",
+            img_folder: folder_base + "Other/",
             img_key: "slideshow_Other_imgs",
             div_id: "Other"
         };

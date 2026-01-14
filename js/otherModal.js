@@ -56,7 +56,7 @@ function initOtherModal() {
     }
 }
 async function SetPrice(){
-    const res = await fetch("../option.json");
+    const res = await fetch("option.json");
     const data = await res.json();
 
     

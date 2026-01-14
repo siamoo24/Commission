@@ -66,14 +66,9 @@ function SlideshowFunc( folder, images, id, slideshow ) {
 }
 
 // 0. LOADING 動畫
-  window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader');
-    const mainContent = document.getElementById('mainContent');
-
-    // 隱藏預載動畫
-    preloader.style.display = 'none';
-    // 顯示網站內容
-    mainContent.style.display = 'block';
+ window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+    document.getElementById('mainContent').style.display = 'block';
   });
 
 

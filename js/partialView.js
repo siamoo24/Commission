@@ -57,6 +57,7 @@ console.log(jsonKey)
           applyJsonData(jsonKey, newElem, img_key).then(data => {
               const imgList = data;
               const div = partialView.querySelector(`#${div_id}`);
+              console.log(data);
               SlideshowFunc(img_folder, imgList,  div);
               
               if(jsonKey=='Other_price'){ initOtherModal(); }

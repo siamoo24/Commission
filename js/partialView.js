@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // ⭐ 從按鈕 id 取 JSON key
       const jsonKey = btn.id.split(":")[1]; // Q
 
-      path = "../partial/"+ jsonKey +"_partial.html";
+      // 本機
+      //path = "../partial/"+ jsonKey +"_partial.html";
+      // Github
+      path = "partial/"+ jsonKey +"_partial.html";
       
       const res = await fetch(path);
       const html = await res.text();

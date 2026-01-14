@@ -71,7 +71,7 @@ console.log(jsonKey)
 
 
 async function applyJsonData(key, scope, img_path) {
-  const res = await fetch("../option.json");
+  const res = await fetch("option.json");
   const data = await res.json();
 
   

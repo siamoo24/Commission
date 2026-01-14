@@ -23,7 +23,7 @@
 
   /* 轉圈動畫顏色 */
   .sk-circle .sk-child:before {
-    background-color: white; /* 動畫顏色，不改暗紅 */
+    background-color: white !important; /* 動畫顏色，不改暗紅 */
   }
 
   /* 文字 */

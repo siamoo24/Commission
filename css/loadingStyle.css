@@ -1,32 +1,36 @@
- @font-face {
+>
+  /* 自訂字體 */
+  @font-face {
     font-family: "Huninn";
     src: url("../UoqMunThenKhung-Regular.ttf") format("truetype");
-}
-/* 全螢幕遮罩 */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(92, 21, 38, 0.7); /* 半透明遮罩 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  flex-direction: column;
-  pointer-events: all; /* 遮罩攔截點擊 */
-}
+  }
 
-.sk-double-bounce1, .sk-double-bounce2 {
-  background-color: white; /* 動畫也改暗紅 */
-}
-/* 可加文字 */
-#preloader p {
-  font-family: "Huninn", sans-serif;
-  margin-top: 20px;
-  font-family: system-ui, sans-serif;
-  color: #333;
-  font-size: 16px;
-  text-align: center;
-}
+  /* 全螢幕遮罩 */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(92, 21, 38, 0.7); /* 半透明暗紅 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    pointer-events: all; /* 遮罩攔截點擊 */
+  }
+
+  /* 轉圈動畫顏色 */
+  .sk-circle .sk-child:before {
+    background-color: white; /* 動畫顏色，不改暗紅 */
+  }
+
+  /* 文字 */
+  #preloader p {
+    font-family: "Huninn", system-ui, sans-serif;
+    margin-top: 20px;
+    color: #fff; /* 白色文字更清楚 */
+    font-size: 16px;
+    text-align: center;
+  }

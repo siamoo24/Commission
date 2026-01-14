@@ -3,7 +3,7 @@
   "Q_art_price": "400~500，看複雜度",
   
   "Full_18_price" : "1500",
-  "full_18_open" : "true",
+  "full_18_open" : "false",
   
   "noise_price" : "50",
   "clean_price" : "150",

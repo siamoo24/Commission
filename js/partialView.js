@@ -89,8 +89,8 @@ async function applyJsonData(key, scope, img_path) {
 }
 
 function FindSlideshow_parm(jsonKey){
-  const base = getBasePath();
-  const folder_base = base + "Image/sample/";
+  
+  const folder_base = "Commission/Image/sample/";
     if (jsonKey === "Q_price") {  
         return {
             img_folder: floder_base + "Q/",

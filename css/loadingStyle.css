@@ -18,7 +18,9 @@
   pointer-events: all; /* 遮罩攔截點擊 */
 }
 
-
+.sk-double-bounce1, .sk-double-bounce2 {
+  background-color: white; /* 動畫也改暗紅 */
+}
 /* 可加文字 */
 #preloader p {
   font-family: "Huninn", sans-serif;

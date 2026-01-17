@@ -2,7 +2,8 @@ import os
 from PIL import Image
 
 # ================== 設定區 ==================
-TARGET_DIR = r"C:\\Users\\Administrator\\Pictures\\修圖"
+#TARGET_DIR = r"C:\\Users\\Administrator\\Pictures\\修圖"
+TARGET_DIR = r"C:\\Users\\a8629\\Documents\\GitHub\\Commission\\Image\\sample"
 MAX_SIZE_GENERAL = 500   # 一般檔案上限
 MAX_SIZE_Q = 200         # Q_檔案上限
 START_QUALITY = 85

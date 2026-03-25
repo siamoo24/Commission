@@ -22,13 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const oldContent = partialView.querySelector(".partial-content");
       partialView.classList.add("show");
-console.log(jsonKey)
+      //console.log(jsonKey)
       if (oldContent) {
         oldContent.classList.remove("show");
         setTimeout(() => {
           oldContent.remove();
           insertNew(partialView, html, jsonKey+"_price");
         }, 400);
+        partialView.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
       } else {
         insertNew(partialView, html, jsonKey+"_price");
       }
@@ -44,11 +48,11 @@ function insertNew(partialView, html, jsonKey) {
 
   requestAnimationFrame(() => {
     if (newElem) newElem.classList.add("show");
-console.log(jsonKey)
+        //console.log(jsonKey)
         if(jsonKey=='Full_18_price'){initRModalView();}
-    // 找參數
-    const param = FindSlideshow_parm(jsonKey);
-    if (!param) return;
+      // 找參數
+      const param = FindSlideshow_parm(jsonKey);
+      if (!param) return;
 
     const { img_folder, img_key, div_id } = param;
 

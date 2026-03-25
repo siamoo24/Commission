@@ -1,18 +1,58 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
- * HTML content. To learn how to do something, just try searching Google for questions like
- * "how to change link color." 
- */
- 
+:root {
+  /* CHEERY */
+  
+  --CHERRY-word: #F5DAA7;  /* 鵝黃 */
+  --CHERRY-sparkle1:rgba(255, 255, 255, 0.8) ;
+  --CHERRY-sparkle2:rgba(255, 255, 255, 0.6) ;
+  --CHERRY-sparkle3:rgba(255, 255, 255, 0.5) ;
+  --CHERRY-main-card-bg: rgba(80, 25, 25, 0.8);
+  --CHERRY-minor-card-bg: rgba(80, 25, 62, 0.8);
+  
+  --CHERRY-sheet-border:#ccc;
+  --CHERRY-square: rgba(86, 21, 48, 0.8);
+  --CHERRY-square-shadow: #A3485A;  /* 淺櫻桃 */
+  --CHERRY-square-line:#F5B9A8;
+  --CHERRY-square-hover:rgba(108, 41, 63, 0.9); /* 深一點的櫻桃色 */
+  --CHERRY-square-active:rgba(122, 51, 68, 0.95);
+  --CHERRY-sheet-border:#ccc;
+
+  --cherry-light: #A3485A;  /* 淺櫻桃 */
+  --cherry-dark:  #842A3B;  /* 黑櫻桃 */
+  --cherry-dark-card: rgba(86, 21, 48, 0.8);
+  --cherry-dark: rgba(108, 41, 63, 0.9); /* 深一點的櫻桃色 */  
+  --cherry-dark: rgba(122, 51, 68, 0.95);
+  --cherry-dark: rgba(86, 21, 48, 0.8); /* 深一點的櫻桃色 */
+
+  /* NAVY */
+  --NAVY-sparkle1:rgba(127, 146, 190, 0.8) ;
+  --NAVY-sparkle2:rgba(127, 146, 190, 0.6) ;
+  --NAVY-sparkle3:rgba(127, 146, 190, 0.5) ;
+
+
+
+  --word:var(--CHEERY-word);
+  --sparkle1: var(--NAVY-sparkle1);
+  --sparkle2: var(--NAVY-sparkle2);
+  --sparkle3: var(--NAVY-sparkle3);
+  --main-card-bg: var(--cherry-dark-card);
+  --square: var(--CHEERY-square);
+  --square-shadow: var(--CHEERY-square-shadow);
+  --square-line: var(--CHEERY-square-line);
+  --square-hover: var(--CHEERY-square-hover);
+  --square-active: var(--CHEERY-square-active);
+  --sheet-border: var(--CHEERRY-sheet-border);
+}
+
+
+
  @font-face {
     font-family: "Huninn";
     src: url("../UoqMunThenKhung-Regular.ttf") format("truetype");
 }
 
-
-/*#A3485A;   /*淺櫻桃*/
 body {
   padding: 24px;
-  color: #F5DAA7;  /*鵝黃*/
+  color: var(--goose-yellow);  /*鵝黃*/
   /*background-color: #A3485A;   /*淺櫻桃*/
   /*font-family: "Noto Sans TC", sans-serif;*/
   font-family: "Huninn", sans-serif;
@@ -21,7 +61,7 @@ body {
   background-repeat: repeat; /* 重複圖片 */
   position: relative; /* 給 after 定位用 */
 }
-/* 閃亮星塵層 */
+/* 閃亮星塵層 ===================================== */
 body::before {
   content: "";
   position: fixed;
@@ -30,27 +70,21 @@ body::before {
   z-index: 0;
 
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+    radial-gradient(circle, var(--sparkle1) 1px, transparent 1px),
+    radial-gradient(circle, var(--sparkle2) 1px, transparent 1px),
+    radial-gradient(circle, var(--sparkle3) 1px, transparent 1px);
 
   background-size: 50px 50px, 80px 80px, 120px 120px;
   animation: sparkle 6s linear infinite;
   opacity: 0.7;
 }
-
 @keyframes sparkle {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  50% {
-    background-position: 25px 25px, 40px 40px, 60px 60px;
-  }
-  100% {
-    background-position: 50px 50px, 80px 80px, 120px 120px;
-  }
+  0% { background-position: 0 0, 0 0, 0 0;}
+  50% { background-position: 25px 25px, 40px 40px, 60px 60px;}
+  100% {background-position: 50px 50px, 80px 80px, 120px 120px;}
 }
 
+/*設置居中 & icon 間隔*/
 i {
   margin-left: 6px;
   margin-right: 6px;
@@ -62,47 +96,42 @@ i {
 }
 
 
-/*POPUP------------------------------------------------------*/
-.popupTable{
+/* POPUP ======================================== */
+/* .popupTable{
     border-collapse: collapse;
     padding: 10px;
     border: none;
-    /*border: 1px solid #F5DAA7;  /*鵝黃*/
+    /*border: 1px solid #F5DAA7;  
     border-radius: 12px;
     background-color: rgba(245, 218, 168, 0.5);
     table-layout: fixed;
     width: 80vw;               
-}
+}*/
+/*
 .popupTable td, .popupTable th {
-    border:  0.5px solid #977C00;       /* 內部分隔線綠色 */
-    /*padding: 10px;*/
-    border-left: none;             /* 無垂直線 */
-    border-right: none;            /* 無垂直線 */
+    border:  0.5px solid #977C00;      
+    /*padding: 10px;*//*
+    border-left: none;            
+    border-right: none;            
 }
+*/
 
 
-
-
-
-/* 表格  ---------------------------------------*/
+/* 表格 ======================================== */
 
 table {
   table-layout: auto;
 }
-
 table tr {
   border-bottom: 0.5px solid ; 
 }
-
 table th {
   width: 30%; 
 }
-
 table td {
   font-size: 14px;  /* 內文縮小 */
   width: 70%; 
 }
-
 td, th {
   padding: 8px;
   vertical-align: middle;
@@ -118,12 +147,11 @@ td, th {
   padding: 20px;
   min-width: 75%;
   height: auto;
-  color: #F5DAA7;  /*鵝黃*/
+  color: var(--word);  
   margin-bottom: 32px;
   border-radius: 12px;
-  background-color: rgba(86, 21, 48, 0.8);
-  /*background-color: #842A3B;   /*黑櫻桃*/
-  box-shadow: 1 4px 8px #A3485A;   /*淺櫻桃*/
+  background-color: var(--main-card-bg);
+  box-shadow: 1 4px 8px var(--CHEERY-main-card-bg);  
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -139,7 +167,6 @@ td, th {
   margin: 0 auto;  /* 置中 */
   margin-bottom: 32px;
 }
-
 .WaterFlow img {
   width: 100%;
   height:auto;
@@ -147,35 +174,35 @@ td, th {
   border-radius: 12px;
 }
 
-.DetailBtn {
+/* .DetailBtn {
   border: none;
   border-radius: 12px;
-  background-color: #A3485A;   /*淺櫻桃*/
-  color: #F5DAA7;  /*鵝黃*/
+  background-color: #A3485A;   /*淺櫻桃*//*
+  color: #F5DAA7;  /*鵝黃*//*
   padding:10px;
   cursor: pointer;
 
   transition: transform 0.15s ease, background-color 0.15s ease;
-}
+} */
 
-/* 滑過效果 */
+/* 滑過效果 *//*
 .DetailBtn:hover {
-  background-color: #8c3c4e;   /* 深一點的櫻桃色 */
-  transform: scale(1.05);      /* 微微放大 */
+  background-color: #8c3c4e;   /* 深一點的櫻桃色 *//*
+  transform: scale(1.05);      /* 微微放大 *//*
 }
 
-/* 點擊效果 */
+/* 點擊效果 *//*
 .DetailBtn:active {
-  transform: scale(0.95);      /* 按下去的感覺 */
-  background-color: #7a3344;   /* 再深一點 */
-}
+  transform: scale(0.95);      /* 按下去的感覺 *//*
+  background-color: #7a3344;   /* 再深一點 *//*
+}*/
 
 .sns-img {
   height:95%;
   max-width: auto;
 }
 
-
+/*小方塊*/
 .info-hover {
   
   display: flex;
@@ -184,7 +211,7 @@ td, th {
   justify-content: center; /* 垂直置中 */
   
   font-size: 14px;  /* 內文縮小 */
-  color: #F5DAA7;  /*鵝黃*/
+  color: var(--word);  /*鵝黃*/
   
   padding: 20px;
   min-width: 10%;
@@ -192,9 +219,8 @@ td, th {
   
   margin-bottom: 32px;
   border-radius: 12px;
-  background-color: rgba(86, 21, 48, 0.8);
-  /*background-color: #842A3B;   /*黑櫻桃*/
-  box-shadow: 1 4px 8px #A3485A;   /*淺櫻桃*/
+  background-color: var(--square);
+  box-shadow: 1 4px 8px var(--square-shadow);   /*淺櫻桃*/
   border: none;
 }
 
@@ -206,20 +232,20 @@ td, th {
   display: block; 
   width: 100%; 
   height: 1px; 
-  background-color: #F5B9A8;  /*駝色*/ 
+  background-color: var(--square-line);  /*駝色*/ 
   margin:5px;
 }
 
 
 .info-hover:hover {
-  background-color: rgba(108, 41, 63, 0.9);   
+  background-color: var(--square-hover);   
   transform: scale(1.05);      /* 微微放大 */
 }
 
 /* 點擊效果 */
 .info-hover:active {
   transform: scale(0.95);      /* 按下去的感覺 */
-  background-color: rgba(122, 51, 68, 0.95);   /* 再深一點 */
+  background-color: var(--square-active);   /* 再深一點 */
 }
 
 .notice-div {
@@ -253,8 +279,8 @@ td, th {
   min-width: 100%;
   width: 100%;
   /*max-width: 900px;*/
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px ;
+  border: 1px solid var(--sheet-border);
   border-radius: 8px;
   overflow: hidden;
   display: flex;

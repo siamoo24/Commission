@@ -231,6 +231,7 @@ td, th {
 .sns-img {
   height:95%;
   max-width: auto;
+  border-radius: 20px;
 }
 
 /*小方塊*/

@@ -400,6 +400,18 @@ td, th {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  
+  font-size: 20px;
+  color: var(--word);   /*淺粉桃*/
+  margin: 0;
+  /* 核心：文字描邊 */
+  text-shadow: 
+    -1px -1px 0 rgb(24, 21, 80),  
+     1px -1px 0 rgb(24, 21, 80),
+    -1px  1px 0 rgb(24, 21, 80),
+     1px  1px 0 rgb(24, 21, 80);
+  -webkit-text-stroke: 0.5px ; /* 寬度 顏色 */
+
 }
 
 .menu-toggle div {

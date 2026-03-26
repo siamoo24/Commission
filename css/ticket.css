@@ -3,8 +3,8 @@
     padding: 20px;
     /*width: 180px;*/
     /*height: 300px;*/
-    width:70vw;
-    height: 50vh;
+    width:70%;
+    height: 50%;
 
     background: linear-gradient(135deg, 
         var(--NAVY-main-card-bg), 

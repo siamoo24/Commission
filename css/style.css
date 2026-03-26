@@ -1,49 +1,54 @@
 :root {
-  /* CHEERY */
-  
+  /* CHEERY --------------------------------*/
   --CHERRY-word: #F5DAA7;  /* 鵝黃 */
+  --CHERRY-title-word: #F5DAA7;  /* 鵝黃 */
   --CHERRY-sparkle1:rgba(255, 255, 255, 0.8) ;
   --CHERRY-sparkle2:rgba(255, 255, 255, 0.6) ;
   --CHERRY-sparkle3:rgba(255, 255, 255, 0.5) ;
-  --CHERRY-main-card-bg: rgba(80, 25, 25, 0.8);
+  --CHERRY-main-card-bg: rgba(86, 21, 48, 0.8);
   --CHERRY-minor-card-bg: rgba(80, 25, 62, 0.8);
   
-  --CHERRY-sheet-border:#ccc;
   --CHERRY-square: rgba(86, 21, 48, 0.8);
   --CHERRY-square-shadow: #A3485A;  /* 淺櫻桃 */
   --CHERRY-square-line:#F5B9A8;
   --CHERRY-square-hover:rgba(108, 41, 63, 0.9); /* 深一點的櫻桃色 */
   --CHERRY-square-active:rgba(122, 51, 68, 0.95);
   --CHERRY-sheet-border:#ccc;
+  --CHERRY-nav-bg: rgba(86, 21, 48, 0.9);
 
-  --cherry-light: #A3485A;  /* 淺櫻桃 */
-  --cherry-dark:  #842A3B;  /* 黑櫻桃 */
-  --cherry-dark-card: rgba(86, 21, 48, 0.8);
-  --cherry-dark: rgba(108, 41, 63, 0.9); /* 深一點的櫻桃色 */  
-  --cherry-dark: rgba(122, 51, 68, 0.95);
-  --cherry-dark: rgba(86, 21, 48, 0.8); /* 深一點的櫻桃色 */
-
-  /* NAVY */
+  /* NAVY -----------------------------------*/
+  --NAVY-word: #F5DAA7;  /* 鵝黃 */
+  --NAVY-title-word: rgba(31, 40, 116, 0.8);  /* 深藍 */
   --NAVY-sparkle1:rgba(127, 146, 190, 0.8) ;
   --NAVY-sparkle2:rgba(127, 146, 190, 0.6) ;
   --NAVY-sparkle3:rgba(127, 146, 190, 0.5) ;
+  --NAVY-main-card-bg: rgba(31, 40, 116, 0.8);
+  --NAVY-minor-card-bg: rgba(82, 83, 158, 0.8);
 
-
-
-  --word:var(--CHEERY-word);
+  --NAVY-square: rgba(8, 13, 59, 0.8);
+  --NAVY-square-shadow: #5880b4;
+  --NAVY-square-hover:rgba(78, 125, 164, 0.9); 
+  --NAVY-square-active:rgba(47, 87, 120, 0.9);
+  
+  --NAVY-nav-bg: rgba(8, 13, 59, 0.9);
+/*------------------------------------------*/
+  --word:var(--NAVY-word);
+  --title-word: var(--NAVY-title-word);
   --sparkle1: var(--NAVY-sparkle1);
   --sparkle2: var(--NAVY-sparkle2);
   --sparkle3: var(--NAVY-sparkle3);
-  --main-card-bg: var(--cherry-dark-card);
-  --square: var(--CHEERY-square);
-  --square-shadow: var(--CHEERY-square-shadow);
-  --square-line: var(--CHEERY-square-line);
-  --square-hover: var(--CHEERY-square-hover);
-  --square-active: var(--CHEERY-square-active);
-  --sheet-border: var(--CHEERRY-sheet-border);
+  --main-card-bg: var(--NAVY-main-card-bg);
+  --minor-card-bg: var(--NAVY-minor-card-bg);
+
+  --square: var(--NAVY-square);
+  --square-shadow: var(--NAVY-square-shadow);
+  --square-line: var(--CHERRY-square-line);
+  --square-hover: var(--NAVY-square-hover);
+  --square-active: var(--NAVY-square-active);
+  /*--sheet-border: var(--CHERRY-sheet-border);*/
+  --nav-bg: var(--NAVY-nav-bg);
+
 }
-
-
 
  @font-face {
     font-family: "Huninn";
@@ -52,14 +57,40 @@
 
 body {
   padding: 24px;
-  color: var(--goose-yellow);  /*鵝黃*/
+  color: var(--word);  /*鵝黃*/
   /*background-color: #A3485A;   /*淺櫻桃*/
   /*font-family: "Noto Sans TC", sans-serif;*/
   font-family: "Huninn", sans-serif;
-  background-image: url('../Image/BG.png'); 
+  /*background-image: url('../Image/BG.png'); */
   /*background-size: cover;    /* 讓圖片覆蓋整個頁面 */
   background-repeat: repeat; /* 重複圖片 */
   position: relative; /* 給 after 定位用 */
+
+
+  
+  background-image:
+    /* 1. 左側打洞效果 (使用徑向漸層模擬圓孔) */
+    radial-gradient(circle, #e0e0e0 10px, transparent 12px),
+    /* 3. 網格垂直線 */
+    linear-gradient(90deg, rgba(163, 212, 222, 0.8),0.5px, transparent 1px),
+    /* 4. 網格水平線 */
+    linear-gradient(rgba(163, 212, 222, 0.8),0.5px, transparent 1px);
+
+  background-size: 
+    100% 50px,    /* 洞孔每 50px 重複一次 */
+    30px 30px,    /* 網格寬度 30px */
+    30px 30px;    /* 網格高度 30px */
+
+  background-position: 
+    -45vw 15px,    /* 洞孔位置：離左邊 25px，向下偏移 15px 對齊網格 */
+    0 0, 
+    0 0;
+
+  background-repeat: 
+    repeat-y,     /* 洞孔只在垂直方向重複 */
+    repeat, 
+    repeat;
+
 }
 /* 閃亮星塵層 ===================================== */
 body::before {
@@ -97,24 +128,24 @@ i {
 
 
 /* POPUP ======================================== */
-/* .popupTable{
+ .popupTable{
     border-collapse: collapse;
     padding: 10px;
     border: none;
-    /*border: 1px solid #F5DAA7;  
+    border: 1px solid #F5DAA7;  
     border-radius: 12px;
     background-color: rgba(245, 218, 168, 0.5);
     table-layout: fixed;
     width: 80vw;               
-}*/
-/*
+}
+
 .popupTable td, .popupTable th {
     border:  0.5px solid #977C00;      
-    /*padding: 10px;*//*
+    padding: 10px;
     border-left: none;            
     border-right: none;            
 }
-*/
+
 
 
 /* 表格 ======================================== */
@@ -151,7 +182,7 @@ td, th {
   margin-bottom: 32px;
   border-radius: 12px;
   background-color: var(--main-card-bg);
-  box-shadow: 1 4px 8px var(--CHEERY-main-card-bg);  
+  box-shadow: 1 4px 8px var(--square-shadow);   /*淺櫻桃*/
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -174,28 +205,28 @@ td, th {
   border-radius: 12px;
 }
 
-/* .DetailBtn {
+ .DetailBtn {
   border: none;
   border-radius: 12px;
-  background-color: #A3485A;   /*淺櫻桃*//*
-  color: #F5DAA7;  /*鵝黃*//*
+  background-color: var(--square);   /*淺櫻桃*/
+  color: var(--word);  /*鵝黃*/
   padding:10px;
   cursor: pointer;
 
   transition: transform 0.15s ease, background-color 0.15s ease;
-} */
+} 
 
-/* 滑過效果 *//*
+/* 滑過效果 */
 .DetailBtn:hover {
-  background-color: #8c3c4e;   /* 深一點的櫻桃色 *//*
-  transform: scale(1.05);      /* 微微放大 *//*
+  background-color: var(--square-hover);   /* 深一點的櫻桃色 */
+  transform: scale(1.05);      /* 微微放大 */
 }
 
-/* 點擊效果 *//*
+/* 點擊效果 */
 .DetailBtn:active {
-  transform: scale(0.95);      /* 按下去的感覺 *//*
-  background-color: #7a3344;   /* 再深一點 *//*
-}*/
+  transform: scale(0.95);      /* 按下去的感覺 */
+  background-color: var(--square-active);   /* 再深一點 */
+}
 
 .sns-img {
   height:95%;
@@ -331,14 +362,18 @@ td, th {
 
 /******************************************************/
 
-.purple-bg{
-  background-color: rgba(80, 25, 62, 0.8);
+.minor-bg{
+  background-color: var(--minor-card-bg);
+}
+.title-word{
+  color: var(--title-word);
 }
 
 .ban{
   color:rgba(238, 105, 131, 0.8);
   position: relative; /* 必須有 relative 才能偏移 */
-  bottom: 5px;
+  margin-top: 10px; /* 增加上邊距，將圖標向下擠 */
+  /*bottom: 5px;*/
 }
 
 
@@ -369,7 +404,7 @@ td, th {
 .menu-toggle div {
   width: 25px;
   height: 3px;
-  background-color: #EE6983;   /*淺粉桃*/
+  /*background-color: #EE6983;   /*淺粉桃*/
   border-radius: 2px;
 }
 
@@ -381,7 +416,7 @@ td, th {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(86, 21, 48, 0.9);
+        background-color: var(--nav-bg);
         flex-direction: column;
         align-items: center;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -414,12 +449,12 @@ td, th {
     padding: 20px;
     min-width: 90%;
     height: auto;
-    color: #F5DAA7;  /*鵝黃*/
+    color: var(--word);  /*鵝黃*/
     margin-bottom: 32px;
     border-radius: 12px;
     
-    background-color: rgba(86, 21, 48, 0.8);
-    box-shadow: 0 4px 8px #A3485A;   /*淺櫻桃*/
+    background-color: var(--main-card-bg);
+    box-shadow: 0 4px 8px var(--square-shadow);   /*淺櫻桃*/
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -460,8 +495,101 @@ td, th {
     opacity: 1;
   }
 
-
-
 }
 
 
+.image-card {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 40px; /* 下方留一點空間給尖角 */
+  background-color: var(--main-card-bg); /* 必須有背景色，尖角才不會斷層 */
+  border-radius: 20px;
+  /* overflow: hidden;  <-- 注意：這裡要移除，否則尖角會被切掉 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  height: 250px;
+  position: relative; /* 讓尖角可以定位 */
+}
+
+/* 為了讓圓角依然有效，我們要把 overflow: hidden 改到內層 */
+.main-img-box, .side-column {
+  overflow: hidden;
+}
+/* 左側大圖 */
+.main-img-box {
+  width: 70%; /* 大圖佔 70% */
+  height: 100%;
+  /* --- 核心置中設定 --- */
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center;     /* 垂直置中 */
+  
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* 讓右側小圖右邊有圓角 */
+.side-column {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* --- 對話泡泡尖角 --- */
+.image-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;    /* 尖角的高度 */
+  left:42vw;       /* 尖角距離左邊的位置 */
+  
+  /* 繪製三角形 */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 15px 0 15px; /* 上、右、下、左 */
+  border-color: var(--main-card-bg) transparent transparent transparent; /* 顏色要跟背景色一樣 */
+  
+  /* 如果想要尖角也有陰影 (選配) */
+  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+}
+  .main-img {
+    width: 90%;
+    height: auto;
+    /*object-fit: cover; /* 確保圖片填滿不變形 */
+    display: block;
+    /* --- 核心設定：水平置中 --- */
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 右側小圖群組容器 */
+.side-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  gap: 10px; /* 建議加一點間距，圓角才會更明顯，不會黏在一起 */
+  padding: 10px 0; /* 上下留一點呼吸空間 */
+}
+
+/* 右側小圖 */
+.sub-img {
+  width: 85%;
+  flex: 1;
+  display: block;
+  min-height: 0;
+  
+  /* --- 關鍵修正 --- */
+  object-fit: cover;    /* 改成 cover，圖片會填滿並裁切，圓角才會貼齊邊緣 */
+  /* 如果堅持要用 contain (不裁切)，請務必加上背景色，否則圓角會因透明而看不見 */
+  /* object-fit: contain; */
+  /* background-color: #f0f0f0; */ 
+
+  border-radius: 20px;  /* 現在圓角會非常明顯 */
+  
+  /* 為了置中 */
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,85 +1,59 @@
-<div class="ticket">
-  <div class="content">
-    <div class="content-top">
-      TICKET STUB
-    </div>
-    
-    <div class="content-bottom">
-      <h2 style="margin: 0;">SPECIAL EVENT</h2>
-      <p>Row A | Seat 12</p>
-      <div class="barcode">||||||||||||||||</div>
-    </div>
-  </div>
-</div>
-
 <style>
-.ticket {
-  width: 180px;
-  height: 300px;
-  background: linear-gradient(135deg, #e0eafc, #cfdef3, #e2d1f9, #d1f5f1);
-  background-size: 400% 400%;
-  animation: laserMove 8s ease infinite;
-  position: relative;
-  border-radius: 12px;
-
-  /* 調整遮罩位置到 30% 處，對齊 3:7 的比例 */
-  /* 核心：組合式遮罩 (Mask) */
-  -webkit-mask-image: 
-    /* 1. 上邊緣重複的小圓 (打洞) */
-    radial-gradient(circle at 50% 0%, transparent 8px, black 9px),
-    /* 2. 下邊緣重複的小圓 (打洞) */
-    radial-gradient(circle at 50% 100%, transparent 8px, black 9px),
-    /* 3. 左右 3:7 的主凹槽 (保留之前的設計) */
-    radial-gradient(circle at 0 40%, transparent 12px, black 13px),
-    radial-gradient(circle at 100% 40%, transparent 12px, black 13px);
-
-  /* 設定重複與大小，讓上下邊緣變成一排圓洞 */
-  -webkit-mask-size: 
-    30px 100%, /* 上邊緣洞的水平間距 */
-    30px 100%, /* 下邊緣洞的水平間距 */
-    100% 100%,
-    100% 100%;
-
-  -webkit-mask-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
-  
-  /* 確保遮罩正確疊加 */
-  -webkit-mask-composite: source-in; 
-  mask-composite: intersect;
+  .image-card {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 40px; /* 下方留一點空間給尖角 */
+  background-color: #fff; /* 必須有背景色，尖角才不會斷層 */
+  border-radius: 20px;
+  /* overflow: hidden;  <-- 注意：這裡要移除，否則尖角會被切掉 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  height: 400px;
+  position: relative; /* 讓尖角可以定位 */
 }
 
-.ticket::after {
-  /* 增加一條明顯的撕票線 */
+/* 為了讓圓角依然有效，我們要把 overflow: hidden 改到內層 */
+.main-img-box, .side-column {
+  overflow: hidden;
+}
+/* 讓左側大圖左邊有圓角 */
+.main-img-box {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+/* 讓右側小圖右邊有圓角 */
+.side-column {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* --- 對話泡泡尖角 --- */
+.image-card::after {
   content: "";
   position: absolute;
-  top: 40%;
-  left: 15px;
-  right: 15px;
-  border-top: 2px dashed rgba(0, 0, 0, 0.1);
-}
-
-.content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 上半部 40% */
-.content-top {
-  height: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-}
-
-/* 下半部 60% */
-.content-bottom {
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  bottom: -20px;    /* 尖角的高度 */
+  left:45vw;       /* 尖角距離左邊的位置 */
+  
+  /* 繪製三角形 */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 15px 0 15px; /* 上、右、下、左 */
+  border-color: #fff transparent transparent transparent; /* 顏色要跟背景色一樣 */
+  
+  /* 如果想要尖角也有陰影 (選配) */
+  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
 }
 </style>
+
+<div class="image-card">
+  <div class="main-img-box">
+    <img src="Image/sample/Q/Q_img_01.png" alt="Main" class="main-img">
+  </div>
+  
+  <div class="side-column">
+    <img src="Image/sample/Q/Q_img_02.png" alt="Sub 1" class="sub-img">
+    <img src="Image/sample/Q/Q_img_03.png" alt="Sub 2" class="sub-img">
+    <img src="Image/sample/Q/Q_img_04.png" alt="Sub 3" class="sub-img">
+  </div>
+</div>

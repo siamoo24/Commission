@@ -1,4 +1,4 @@
->
+
   /* 自訂字體 */
   @font-face {
     font-family: "Huninn";
@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(92, 21, 38, 0.7); /* 半透明暗紅 */
+    background:rgba(15, 20, 71, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,12 +1,28 @@
 
 .ticket {
-    width: 180px;
-    height: 300px;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3, #e2d1f9, #d1f5f1);
+    padding: 20px;
+    /*width: 180px;*/
+    /*height: 300px;*/
+    width:70vw;
+    height: 50vh;
+
+    background: linear-gradient(135deg, 
+        var(--NAVY-main-card-bg), 
+        var(--NAVY-minor-card-bg), 
+        var(--NAVY-square), 
+        var(--NAVY-word), 
+        var(--NAVY-main-card-bg)
+    );
     background-size: 400% 400%;
-    animation: laserMove 8s ease infinite;
+    animation: laserMove 10s ease infinite; /* 稍微慢一點，感覺比較優雅 */
+
     position: relative;
     border-radius: 12px;
+
+    margin-bottom: 60px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 
     /* 調整遮罩位置到 40% 處，對齊 4:6 的比例 */
     /* 核心：組合式遮罩 (Mask) */
@@ -16,8 +32,8 @@
         /* 2. 下邊緣重複的小圓 (打洞) */
         radial-gradient(circle at 50% 100%, transparent 8px, black 9px),
         /* 3. 左右 4:6 的主凹槽 (保留之前的設計)撕票口的半圓形 */
-        radial-gradient(circle at 0 40%, transparent 12px, black 13px),
-        radial-gradient(circle at 100% 40%, transparent 12px, black 13px);
+        radial-gradient(circle at 0 30%, transparent 12px, black 13px),
+        radial-gradient(circle at 100% 30%, transparent 12px, black 13px);
 
     /* 設定重複與大小，讓上下邊緣變成一排圓洞 */
     -webkit-mask-size: 
@@ -31,13 +47,14 @@
     /* 確保遮罩正確疊加 */
     -webkit-mask-composite: source-in; 
     mask-composite: intersect;
+    
 }
 
 /* 增加一條明顯的撕票線 */
 .ticket::after {
   content: "";
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 15px;
   right: 15px;
   border-top: 2px dashed rgba(0, 0, 0, 0.1);
@@ -51,7 +68,7 @@
 
 /* 上半部 40% */
 .content-top {
-  height: 40%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,10 +78,23 @@
 
 /* 下半部 60% */
 .content-bottom {
-  height: 60%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
+
+
+@keyframes laserMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }

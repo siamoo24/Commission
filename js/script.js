@@ -24,7 +24,7 @@ var complex_price;
 
 
 // -------------------------------------------------------------------
-// 菜單開關 (函數定義可以放在全域，因為它不會存取 DOM 元素)
+// MENU 開關 (函數定義可以放在全域，因為它不會存取 DOM 元素)
 // -------------------------------------------------------------------
 function toggleMenu() {
   const navLinks = document.querySelector('.nav-links');
@@ -65,18 +65,18 @@ function SlideshowFunc( folder, images, id, slideshow ) {
 
 }
 
-// 0. LOADING 動畫
+// -------------------------------------------------------------------
+// 負責在「載入完成」的那一刻把 LOADING 動畫關掉。
+// -------------------------------------------------------------------
  window.addEventListener('load', () => {
     document.getElementById('preloader').style.display = 'none';
   });
-
 
 
 // -------------------------------------------------------------------
 // 🚀 主要啟動區塊：等待 DOM 載入完成後執行所有初始化和事件綁定
 // -------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-
   
   // 1. Menu 動畫/錨點跳轉
   document.querySelectorAll('.nav-links a').forEach(link => {
@@ -94,11 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500); 
     });
   });
- 
-
-
-
-  
 
 });
 
@@ -146,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 // -------------------------------------------------------------------
-// 輪播啟動區塊：使用 window.onload 確保圖片資源已載入
+// WATERFLOW：使用 window.onload 確保圖片資源已載入
 // -------------------------------------------------------------------
 window.onload = function() {
   
@@ -154,8 +149,6 @@ window.onload = function() {
   .then(response => response.json())  // 把回傳轉成 JSON
   .then(data => {
     
-   
-
     //Waterflow
     const left = document.getElementById("water-left");
     const right = document.getElementById("water-right");
@@ -175,8 +168,6 @@ window.onload = function() {
     
       Full_18_price = data.Full_18_price;
       full_18_open = data.full_18_open;
-    
-    
     
     
   })

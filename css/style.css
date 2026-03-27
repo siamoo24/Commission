@@ -441,6 +441,19 @@ td, th {
         max-height: 0; /* 隱藏菜單 */
         opacity: 0; /* 初始透明度為 0 (淡入效果) */
         transition: max-height 0.5s ease-out, opacity 0.3s ease-in; /* 分開設置過渡效果 */
+
+        
+
+    }
+
+    .nav-links a{
+        /* 核心：文字描邊 */
+        text-shadow: 
+          -1px -1px 0 rgb(24, 21, 80),  
+          1px -1px 0 rgb(24, 21, 80),
+          -1px  1px 0 rgb(24, 21, 80),
+          1px  1px 0 rgb(24, 21, 80);
+        -webkit-text-stroke: 0.5px ; /* 寬度 顏色 */
     }
 
     .nav-links.show {

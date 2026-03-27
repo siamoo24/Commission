@@ -421,6 +421,14 @@ td, th {
   border-radius: 2px;
 }
 
+.nav-links a{
+        /* 核心：文字描邊 */
+        text-shadow: 
+          -1px -1px 0 rgb(24, 21, 80),  
+          1px -1px 0 rgb(24, 21, 80),
+          -1px  1px 0 rgb(24, 21, 80),
+          1px  1px 0 rgb(24, 21, 80);
+    }
 /* 手機小螢幕優化 */
 @media (max-width: 576px) {
     .nav-links {
@@ -446,15 +454,7 @@ td, th {
 
     }
 
-    .nav-links a{
-        /* 核心：文字描邊 */
-        text-shadow: 
-          -1px -1px 0 rgb(24, 21, 80),  
-          1px -1px 0 rgb(24, 21, 80),
-          -1px  1px 0 rgb(24, 21, 80),
-          1px  1px 0 rgb(24, 21, 80);
-        -webkit-text-stroke: 0.5px ; /* 寬度 顏色 */
-    }
+    
 
     .nav-links.show {
         max-height: 500px; 

@@ -218,7 +218,7 @@
 
     
     <!--自由項目彈跳視窗頁  -->
-    <div id="OtherModal" class="modal" style="padding-top: 10vh;">
+    <div id="OtherModal" class="modal" style="padding-top: 10vh;font-size: 0.75rem;">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('OtherModal').style.display='none'">&times;</span>
 
@@ -266,14 +266,11 @@
                 <tr>
                     <th>說明</th>
                     <td id="noise_exp" onclick="selectNoise()">
-                        起伏有些不定，簡單設定有可能拿到無雜線，要賭<i class="fa-solid fa-dice"></i></td>
+                        起伏不定，有可能無雜線，要賭<i class="fa-solid fa-dice"></i></td>
                     <td id="clean_exp" onclick="selectClean()">一定會是無雜線版本</td>
                 </tr>
             </table>
 
-            <p></p>
-            <p></p>
-            
             <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望繪製範圍</p>
             <table class="popupTable option-card">
                 <tr>
@@ -313,16 +310,13 @@
                 </tr>
             </table>
 
-            <p></p>
-            <p></p>
-            
             <p style="margin: 0;"><i class="fa-solid fa-circle-question"></i>&nbsp;希望上色方式</p>
             <table class="popupTable option-card">
                 <tr>
                     <th>方式</th>
                     <td style="width:30%" id="empty_tit" onclick="selectEmpty()"> 無上色</td>
-                    <td style="width:30%" id="skin_tit" onclick="selectSkin()"> 膚、瞳、髮底色</td>
-                    <td style="width:30%" id="gray_tit" onclick="selectGray()"> 黑、灰、白底色</td>
+                    <td style="width:30%" id="skin_tit" onclick="selectSkin()"> 膚瞳髮底色</td>
+                    <td style="width:30%" id="gray_tit" onclick="selectGray()"> 黑灰白底色</td>
                 </tr>
 
                 <tr>
@@ -395,8 +389,8 @@
                 <tr>
                     <th>說明</th>
                     <td id="dot_exp" onclick="selectDot()"></td>
-                    <td id="simple_exp" onclick="selectSimple()">會上一層陰影</td>
-                    <td id="complex_exp" onclick="selectComplex()">最少有兩層陰影，有機率增加其他</td>
+                    <td id="simple_exp" onclick="selectSimple()">一層陰影</td>
+                    <td id="complex_exp" onclick="selectComplex()">有兩層陰影</td>
                 </tr>
             </table>
 

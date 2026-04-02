@@ -128,7 +128,7 @@ i {
 
 
 /* POPUP ======================================== */
- .popupTable{
+ /* .popupTable{
     border-collapse: collapse;
     padding: 10px;
     border: none;
@@ -144,9 +144,55 @@ i {
     padding: 10px;
     border-left: none;            
     border-right: none;            
+} */
+
+/* POPUP ======================================== */
+.popupTable {
+    border-collapse: separate;      /* 改為 separate 才能顯示圓角 */
+    border-spacing: 0;             /* 讓單元格緊貼，模擬 collapse 效果 */
+    padding: 0;                    /* 表格本身不建議設 padding，改設在 td/th */
+    border: 1px solid #F5DAA7;  
+    border-radius: 12px;
+    background-color: rgba(245, 218, 168, 0.5);
+    table-layout: fixed;
+    
+    /* 置中關鍵設定 */
+    width: 95%;                    /* 寬度改為 95% */
+    margin: 2px auto;             /* 上下留 10px，左右 auto 自動置中 */
+    overflow: hidden;              /* 確保內容不會超出圓角邊框 */
 }
 
+.popupTable td, .popupTable th {
+    border-bottom: 0.5px solid #977C00; /* 只留底部線條，視覺更簡潔 */
+    text-align: center;                /* 確保文字置中 */
+}
 
+/* 移除最後一列的底線，避免與圓角邊框重疊 */
+.popupTable tr:last-child td {
+    border-bottom: none;
+}
+
+/* 針對範例圖片的自適應優化 */
+.popupTable img {
+    width: 100%;                   /* 讓圖片寬度填滿單元格 */
+    max-width: 150px;              /* 限制最大寬度防止在寬螢幕過大 */
+    height: auto;
+    border-radius: 4px;            /* 圖片也加一點微圓角增加精緻度 */
+    display: block;
+    margin: 0 auto;
+}
+.popupTable td {
+    padding: 2px 4px;      /* 稍微縮減內距，配合小字體 */
+    /* 文字大小設定 */
+    font-size: 0.75rem;    /* 或是使用 13px / 14px */
+    line-height: 1.2;      /* 讓多行文字（如說明欄）更有呼吸感 */
+}
+
+/* 如果你希望「標題列 (th)」維持原樣，但「內容列 (td)」變小，這樣分開寫是對的 */
+.popupTable th {
+    font-size: 0.85rem;    /* 標題可以稍微大一點點點 */
+    font-weight: bold;
+}
 
 /* 表格 ======================================== */
 

@@ -42,7 +42,7 @@
 
   --square: var(--NAVY-square);
   --square-shadow: var(--NAVY-square-shadow);
-  --square-line: var(--CHERRY-square-line);
+  --square-line: var(--NAVY-word);
   --square-hover: var(--NAVY-square-hover);
   --square-active: var(--NAVY-square-active);
   /*--sheet-border: var(--CHERRY-sheet-border);*/
@@ -503,7 +503,7 @@ td, th {
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
+    /*pointer-events: none;*/
   }
 
   .partial-view.show {
@@ -526,15 +526,17 @@ td, th {
 
 .image-card {
   display: flex;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto 40px; /* 下方留一點空間給尖角 */
-  background-color: var(--main-card-bg); /* 必須有背景色，尖角才不會斷層 */
+  width: 90%;           /* 1. 寬度佔螢幕 90% */
+  max-width: 800px;     /* 保持最大寬度限制，避免在超大螢幕上過大 */
+  margin: 20px auto 40px; 
+  background-color: var(--main-card-bg);
   border-radius: 20px;
-  /* overflow: hidden;  <-- 注意：這裡要移除，否則尖角會被切掉 */
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  height: 250px;
-  position: relative; /* 讓尖角可以定位 */
+  position: relative;
+  
+  /* --- 2. 核心比例設定 --- */
+  aspect-ratio: 12 / 9; /* 設定寬高比為 12:9 */
+  height: auto;         /* 移除原本的 250px，讓高度隨比例自動計算 */
 }
 
 /* 為了讓圓角依然有效，我們要把 overflow: hidden 改到內層 */
@@ -565,8 +567,10 @@ td, th {
   content: "";
   position: absolute;
   bottom: -20px;    /* 尖角的高度 */
-  left:42vw;       /* 尖角距離左邊的位置 */
-  
+  /*left:42vw;       /* 尖角距離左邊的位置 */
+  /* --- 修正位置：使用百分比 --- */
+  left: 50%;           /* 先移動到卡片寬度的正中間 */
+  transform: translateX(-50%); /* 往回推一半寬度，確保尖角尖端絕對置中 */
   /* 繪製三角形 */
   width: 0;
   height: 0;
@@ -578,14 +582,15 @@ td, th {
   filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
 }
   .main-img {
-    width: 90%;
-    height: auto;
+    width: auto;
+    height: 90%;
     /*object-fit: cover; /* 確保圖片填滿不變形 */
     display: block;
     /* --- 核心設定：水平置中 --- */
     
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
   }
 
   /* 右側小圖群組容器 */
@@ -606,6 +611,7 @@ td, th {
   flex: 1;
   display: block;
   min-height: 0;
+  border-radius: 20px;
   
   /* --- 關鍵修正 --- */
   object-fit: cover;    /* 改成 cover，圖片會填滿並裁切，圓角才會貼齊邊緣 */
@@ -618,4 +624,72 @@ td, th {
   /* 為了置中 */
   margin-left: auto;
   margin-right: auto;
+}
+.main-img:hover, .sub-img:hover {
+  filter: brightness(0.9); /* 滑鼠移上去稍微變暗 */
+  transition: 0.3s;
+}
+
+
+/* 燈箱背景 */
+.img-modal {
+  display: none; 
+  position: fixed;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 90vw;
+  height: 90vw;
+
+  background-color: var(--square); /* 黑色半透明 */
+  cursor: zoom-out;
+  
+  border-radius: 20px;
+}
+
+/* 放大後的圖片 */
+.img-modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 20px;
+}
+
+/* 關閉按鈕 - 移到方塊外面 */
+.img-close {
+  position: absolute;
+  /* 往上與往右推出去 */
+  top: -20px; 
+  right: -10px; 
+  
+  /* 特殊形狀：圓形背景 */
+  width: 50px;
+  height: 50px;
+  background-color: var(--square); /* 跟燈箱同色，或是用 Tomato 紅色 */
+  border: 2px solid #fff;          /* 白色邊框增加質感 */
+  border-radius: 50%;              /* 變成正圓形 */
+  
+  /* 文字置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10001; /* 確保比燈箱本體高 */
+  
+  /* 陰影感 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.img-close:hover {
+  transform: scale(1.1) rotate(90deg); /* 懸停時放大並旋轉，增加趣味感 */
+  color: #eee;
 }

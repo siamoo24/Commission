@@ -1,6 +1,6 @@
 
 var Q_price ;
-var Q_art_price;
+var QArt_price;
   
 var Full_18_price;
 var full_18_open;
@@ -177,5 +177,33 @@ window.onload = function() {
 }
 
 
+// -------------------------------------------------------------------
+// 「點擊圖片就放大」的功能
+// -------------------------------------------------------------------
+document.addEventListener("click", (e) => {
+    // 取得燈箱元素
+    const imgModal = document.getElementById("imgModal");
+    const expandedImg = document.getElementById("expandedImg");
 
+    // 檢查點擊的目標是否為 <img>
+    if (e.target.tagName === "IMG") {
+        
+        // 判斷是否屬於我們要放大的範圍
+        const isCardImg = e.target.classList.contains("main-img") || e.target.classList.contains("sub-img");
+        const isWaterfallImg = e.target.closest("#water-left") || e.target.closest("#water-right");
 
+        if (isCardImg || isWaterfallImg) {
+            console.log("📸 成功偵測點擊！來源：", e.target.src);
+            
+            if (imgModal && expandedImg) {
+                imgModal.style.display = "flex"; 
+                expandedImg.src = e.target.src;
+            }
+        }
+    }
+
+    // 點擊燈箱本身則關閉
+    if (imgModal && e.target.closest("#imgModal")) {
+        imgModal.style.display = "none";
+    }
+});

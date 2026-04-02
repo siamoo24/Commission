@@ -4,7 +4,7 @@
 //-----------------------------------------------
 
 var Q_price ;
-var Q_art_price;
+var QArt_price;
   
 var Full_18_price;
 var full_18_open;

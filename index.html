@@ -56,8 +56,13 @@
       </div>
       <p>載入中，請稍候...</p>
     </div>
+
     
-    
+    <!--點擊圖片就放大-->
+    <div id="imgModal" class="img-modal">
+      <span class="img-close">&times;</span>
+      <img class="img-modal-content" id="expandedImg">
+    </div>
 
     
     <!-- 🔹 固定置頂的功能選單列 -->
@@ -159,8 +164,8 @@
             </div>
 
             <div class="col-6 center">
-              <button class="info-hover w-100 sns-card good-card "id="partial-Q:Q_art" style="height: 150px">
-                <img src="Image/sample/Q_art/Q_art_img_01.png" class="sns-img"/>
+              <button class="info-hover w-100 sns-card good-card "id="partial-Q:QArt" style="height: 150px">
+                <img src="Image/sample/QArt/QArt_img_01.png" class="sns-img"/>
                 <span class="hr-line " ></span>
                 <h6 class="sns-title" style="font-size: 12px;">Q版插圖</h6>     
               </button>
@@ -173,7 +178,15 @@
                 <h6 class="sns-title" style="font-size: 12px;">自由項目</h6>     
               </button>
             </div>
-            
+
+            <div class="col-6 center">
+              <button class="info-hover w-100 sns-card good-card "id="partial-Q:Comic" style="height: 150px">
+                <img src="Image/sample/Comic/Comic_img_01.png" class="sns-img"/>
+                <span class="hr-line " ></span>
+                <h6 class="sns-title" style="font-size: 12px;">三格漫畫</h6>     
+              </button>
+            </div>
+
             <div class="col-6 center">
               <button class="info-hover w-100 sns-card good-card "id="partial-Q:Full" style="height: 150px">
                 <img src="Image/Title.png" class="sns-img"/>
@@ -420,16 +433,18 @@
             
             <tr style="color:var(--square-shadow);"><th><i class="fa-solid fa-dollar-sign"></i>收款</th>  <td >目前只有匯款</td>  </tr>
             
-            <tr>  <th style="text-align: left; vertical-align: middle;">
-                <div class="d-flex align-items-center">
-                    <span class="fa-stack me-2" style="font-size: 0.8em;">
-                      <i class="fa-solid fa-edit fa-stack-1x"></i>
-                      <i class="fa-solid fa-ban fa-stack-1x ban" style="color: Tomato; "></i>
-                    </span><span>禁止修改</span>
-                </div></th> <td > 修改Χ、液化Χ、調色Ο、裁切Ο</td></tr>
+            <tr>  <th style="text-align: center; vertical-align: middle;">
+                <div class="d-flex align-items-center justify-content-center">
+                  <span class="fa-stack me-2" style="font-size: 0.8em;">
+                    <i class="fa-solid fa-edit fa-stack-1x"></i>
+                    <i class="fa-solid fa-ban fa-stack-1x ban" style="color: Tomato;"></i>
+                  </span>
+                  <span>禁止修改</span>
+                </div>
+              </th><td > 修改Χ、液化Χ、調色Ο、裁切Ο</td></tr>
 
-              <tr style="color:var(--square-shadow);">  <th style="text-align: left; vertical-align: middle;">
-              <div class="d-flex align-items-center">
+              <tr style="color:var(--square-shadow);">  <th style="text-align: center; vertical-align: middle;">
+                <div class="d-flex align-items-center justify-content-center">
                   <span class="fa-stack me-2" style="font-size: 0.8em;">
                     <i class="fa-solid fa-user-group fa-stack-1x"></i>
                     <i class="fa-solid fa-ban fa-stack-1x ban" style="color: Tomato; "></i>

@@ -8,18 +8,18 @@
   "full_18_open" : "true",
   
   "noise_price" : "50",
-  "clean_price" : "250",
+  "clean_price" : "150",
   
-  "top_price" : "100",
-  "mid_price" : "200",
-  "bot_price" : "250",
+  "top_price" : "50",
+  "mid_price" : "250",
+  "bot_price" : "450",
   
   "empty_price": "0",
   "skin_price" : "50",
   "gray_price" : "50",
   "dot_price"  : "100",
   "simple_price"  : "200",
-  "complex_price"  : "300",
+  "complex_price"  : "400",
   
   "slideshow_Q_imgs":["Q_img_01.png", "Q_img_02.png", "Q_img_03.png"],
   "slideshow_QArt_imgs":["QArt_img_01.png", "QArt_img_02.png", "QArt_img_03.png"],

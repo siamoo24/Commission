@@ -198,6 +198,7 @@ i {
 
 table {
   table-layout: auto;
+  border-collapse: collapse;
 }
 table tr {
   border-bottom: 0.5px solid ; 

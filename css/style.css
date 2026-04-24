@@ -200,9 +200,9 @@ table {
   table-layout: auto;
   border-collapse: collapse;
 }
-table tr {
+/*table tr {
   border-bottom: 0.5px solid ; 
-}
+}*/
 table th {
   width: 30%; 
 }
@@ -216,6 +216,12 @@ td, th {
   max-height: none;
 }
 
+/* 刪除原本的 table tr 部分，改寫成這樣 */
+table td, table th {
+  border-bottom: 0.5px solid ; /* 請確保顏色碼正確 */
+  padding: 8px;
+  vertical-align: middle;
+}
 
 
 /*小視窗介面 ----------------------------------------*/

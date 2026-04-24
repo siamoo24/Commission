@@ -147,82 +147,53 @@ i {
 } */
 
 /* POPUP ======================================== */
-.popupTable {
-    border-collapse: separate;      /* 改為 separate 才能顯示圓角 */
-    border-spacing: 0;             /* 讓單元格緊貼，模擬 collapse 效果 */
-    padding: 0;                    /* 表格本身不建議設 padding，改設在 td/th */
-    border: 1px solid #F5DAA7;  
-    border-radius: 12px;
-    background-color: rgba(245, 218, 168, 0.5);
-    table-layout: fixed;
-    
-    /* 置中關鍵設定 */
-    width: 95%;                    /* 寬度改為 95% */
-    margin: 2px auto;             /* 上下留 10px，左右 auto 自動置中 */
-    overflow: hidden;              /* 確保內容不會超出圓角邊框 */
+
+
+/* 表格統一設定 ======================================== */
+table, .popupTable {
+  border-collapse: collapse !important;
+  width: 100%;
 }
 
+/* 確保所有單元格都有底線 (使用 1px 確保手機清晰) */
+table td, table th,
 .popupTable td, .popupTable th {
-    border-bottom: 0.5px solid #977C00; /* 只留底部線條，視覺更簡潔 */
-    text-align: center;                /* 確保文字置中 */
+  border-bottom: 1px solid #977C00 !important;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+/* 針對 .popupTable 的特殊圓角與背景處理 */
+.popupTable {
+  border-spacing: 0;
+  border: 1px solid #F5DAA7;
+  border-radius: 12px;
+  background-color: rgba(245, 218, 168, 0.5);
+  table-layout: fixed;
+  width: 95%;
+  margin: 2px auto;
+  overflow: hidden;
 }
 
 /* 移除最後一列的底線，避免與圓角邊框重疊 */
-.popupTable tr:last-child td {
-    border-bottom: none;
+.popupTable tr:last-child td,
+.popupTable tr:last-child th,
+table tr:last-child td,
+table tr:last-child th {
+  border-bottom: none !important;
 }
 
-/* 針對範例圖片的自適應優化 */
-.popupTable img {
-    width: 100%;                   /* 讓圖片寬度填滿單元格 */
-    max-width: 150px;              /* 限制最大寬度防止在寬螢幕過大 */
-    height: auto;
-    border-radius: 4px;            /* 圖片也加一點微圓角增加精緻度 */
-    display: block;
-    margin: 0 auto;
-}
-.popupTable td {
-    padding: 2px 4px;      /* 稍微縮減內距，配合小字體 */
-    /* 文字大小設定 */
-    font-size: 0.75rem;    /* 或是使用 13px / 14px */
-    line-height: 1.2;      /* 讓多行文字（如說明欄）更有呼吸感 */
-}
-
-/* 如果你希望「標題列 (th)」維持原樣，但「內容列 (td)」變小，這樣分開寫是對的 */
+/* 標題與內文權重 */
 .popupTable th {
-    font-size: 0.85rem;    /* 標題可以稍微大一點點點 */
-    font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: bold;
+  width: 30%;
 }
 
-/* 表格 ======================================== */
-
-table {
-  table-layout: auto;
-  border-collapse: collapse;
+.popupTable td {
+  font-size: 14px;
+  width: 70%;
 }
-/*table tr {
-  border-bottom: 0.5px solid ; 
-}*/
-table th {
-  width: 30%; 
-}
-table td {
-  font-size: 14px;  /* 內文縮小 */
-  width: 70%; 
-}
-td, th {
-  padding: 8px;
-  vertical-align: middle;
-  max-height: none;
-}
-
-/* 刪除原本的 table tr 部分，改寫成這樣 */
-table td, table th {
-  border-bottom: 0.5px solid ; /* 請確保顏色碼正確 */
-  padding: 8px;
-  vertical-align: middle;
-}
-
 
 /*小視窗介面 ----------------------------------------*/
 
@@ -473,6 +444,99 @@ table td, table th {
   /*background-color: #EE6983;   /*淺粉桃*/
   border-radius: 2px;
 }
+@media (max-width: 576px) {
+    .nav-links {
+        /* 保持 position, top, left, width, background-color, flex-direction 等不變 */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 0; /* 移除 padding-top/bottom，改用 max-height 控制高度 */
+
+        /* ✨ 動畫關鍵：初始狀態 */
+        display: flex; /* 保持 flex 以允許內部元素佈局 */
+        overflow: hidden; /* 隱藏超出 max-height 的內容 */
+        max-height: 0; /* 隱藏菜單 */
+        opacity: 0; /* 初始透明度為 0 (淡入效果) */
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-in; /* 分開設置過渡效果 */
+
+        
+
+    }
+
+    
+
+    .nav-links.show {
+        max-height: 500px; 
+        opacity: 1; 
+    }
+    
+    /* 你的其他樣式保持不變 */
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .sheet {
+      padding-bottom: 75%; 
+    }
+    /*小視窗介面 ----------------------------------------*/
+
+    .card {
+    padding: 20px;
+    min-width: 90%;
+    height: auto;
+    color: var(--word);  /*鵝黃*/
+    margin-bottom: 32px;
+    border-radius: 12px;
+    
+    background-color: var(--main-card-bg);
+    box-shadow: 0 4px 8px var(--square-shadow);   /*淺櫻桃*/
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+    overflow: hidden;
+  }
+  
+  .WaterFlow {
+    width: 95%;   /* 手機寬度改成 90vw */
+  }
+  .SNS{
+    width: 95%;   /* 手機寬度改成 90vw */
+  }
+  
+
+  /*商品PARTIAL VIEW*/
+  
+  .partial-view {
+    margin-top: 24px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    /*pointer-events: none;*/
+  }
+
+  .partial-view.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .partial-content {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .partial-content.show {
+    opacity: 1;
+  }
+
+}
+
 
 .nav-links a{
         /* 核心：文字描邊 */

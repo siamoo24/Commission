@@ -717,3 +717,71 @@ table tr:last-child th {
   transform: scale(1.1) rotate(90deg); /* 懸停時放大並旋轉，增加趣味感 */
   color: #eee;
 }
+
+
+
+
+/* Container settings for the button */
+.custom-layered-card {
+    position: relative; /* Crucial: This establishes the positioning context */
+    overflow: hidden;
+    padding: 0 !important; /* Ensure the image touches the borders */
+    border: none;
+    border-radius: 15px; /* Matches the rounded corner style */
+    display: block !important; /* Cancel out flex layout so layering works */
+}
+
+/* 1. Background image settings: stretches to full horizontal width */
+.sns-img-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important; /* Full horizontal fill */
+    height: 100% !important; /* Full vertical fill */
+    object-fit: cover; /* Ensures the image doesn't stretch weirdly */
+    object-position: center; /* Adjust this to keep the faces visible (top, center, or bottom) */
+    z-index: 1; /* Keeps it on the bottom layer */
+}
+
+/* 2. Text overlay layer: semi-transparent, sitting on the right side */
+.card-text-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; /* The width of the translucent box, adjust as needed */
+    height: 100%;
+    background-color: rgba(102, 107, 147, 0.85); /* Semi-translucent purple color from image */
+    z-index: 2; /* Sits on top of the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Internal text styling */
+.overlay-content {
+    text-align: center;
+}
+
+.sns-title {
+    margin: 0;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+}
+
+.sns-price {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Blue tag styling */
+.sns-tag {
+    background-color: #AEE6F6; /* Light blue color from your reference image */
+    color: #555;
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 5px auto 0;
+}

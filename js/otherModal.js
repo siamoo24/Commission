@@ -85,14 +85,14 @@ async function SetPrice(){
     document.getElementById("mid_price").innerText = mid_price;
     document.getElementById("bot_price").innerText = bot_price;
     
-    document.getElementById("empty_price").innerHTML += empty_price;
-    document.getElementById("skin_price").innerHTML += skin_price;
-    document.getElementById("gray_price").innerHTML += gray_price;
+    document.getElementById("empty_price").innerHTML = empty_price;
+    document.getElementById("skin_price").innerHTML = skin_price;
+    document.getElementById("gray_price").innerHTML = gray_price;
     
     
-    document.getElementById("dot_price").innerHTML += dot_price;
-    document.getElementById("simple_price").innerHTML += simple_price;
-    document.getElementById("complex_price").innerHTML += complex_price;
+    document.getElementById("dot_price").innerHTML = dot_price;
+    document.getElementById("simple_price").innerHTML = simple_price;
+    document.getElementById("complex_price").innerHTML = complex_price;
 
 
     selectNoise();

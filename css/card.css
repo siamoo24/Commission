@@ -1,0 +1,64 @@
+
+
+.card {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    color: var(--word);
+    margin-bottom: 1px;
+}
+
+.word-card{
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 抬高卡片 (Y軸向上移動5像素) */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* 加重陰影，模擬浮空感 */
+}
+
+.card-a{
+    background-color: var(--main-card-bg);
+}
+.card-b{
+    background-color: var(--minor-card-bg);
+}
+.card img{
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    color: var(--word);
+}
+
+.card hr{
+    width: 80%;
+    color: var(--word);
+    margin: 0 auto; /* 上下邊距為 0，左右邊距自動分配，達到置中效果 */
+}
+
+.hr-line{
+    display: block; 
+    width: 100%; 
+  
+    margin: 0 auto; /* 上下邊距為 0，左右邊距自動分配，達到置中效果 */
+    border: none;
+}
+
+.info-text{
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.homeCard{
+    aspect-ratio: 1 / 1.3 !important;
+    border-radius: 10px;
+    color: var(--word);
+    margin-bottom: 1px;
+    border: 0px;
+    width: 100%;
+}
+
+.homeCard:hover {
+    transform: translateY(-5px); /* 抬高卡片 (Y軸向上移動5像素) */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* 加重陰影，模擬浮空感 */
+}

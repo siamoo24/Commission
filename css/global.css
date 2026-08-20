@@ -1,0 +1,81 @@
+/*字體*/
+@font-face {
+  font-family: "UoqMunThenKhung";
+  src: url("../UoqMunThenKhung-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+    --word: #F5DAA7;
+    --title-word:rgba(116, 31, 59, 0.8);
+    --nav-bg:rgba(59, 8, 33, 0.9);
+    
+    --main-card-bg: rgba(116, 31, 52, 0.8);
+    --minor-card-bg: rgba(158, 82, 101, 0.8);
+}
+
+body {
+    margin: 0 ;
+    padding: 0;
+    width: 100%;
+    max-width: 768px;
+    box-sizing: border-box; 
+    color: var(--title-word); 
+    font-family: "UoqMunThenKhung", sans-serif;
+    overflow-x: hidden;
+
+    display: flex;
+    text-align: center;
+    align-items: center; 
+    position: relative; 
+
+
+    /* background-repeat: repeat;  */
+    /*【網格】 radial- 左側打洞效果；linear-網格線 */
+    background-image:
+        radial-gradient(circle, #e0e0e0 10px, transparent 12px),
+        linear-gradient(90deg, rgba(222, 163, 178, 0.8),0.5px, transparent 1px), /* 網格垂直線 */
+        linear-gradient(rgba(222, 163, 181, 0.8),0.5px, transparent 1px);  /* 網格水平線 */
+
+    /*【網格】間隔 */
+    background-size: 100% 50px, 30px 30px, 30px 30px;
+
+    /*【網格】起始位置*/
+    background-position: -45vw 15px, 0 0, 0 0;
+    
+    /*【網格】重複垂直方向*/
+    background-repeat: repeat-y, repeat, repeat;
+
+}
+
+i {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.hr{
+    min-width:70%; max-width: fit-content; margin-left: auto; margin-right: auto;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titleIcon{
+    width: auto;
+    height: 20px;   /**/
+    vertical-align: middle;
+}
+
+.homeCard {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    color: var(--word);
+    margin-bottom: 1px;
+    font-size: 0.8rem;
+}

@@ -1,6 +1,9 @@
+
+
 // 切換內容的函式
 function InfoChange(pageName) {
     url = './info/' + pageName + '.html'
+
     fetch(url)
         .then(response => {
             if (!response.ok) throw new Error('頁面載入失敗');
@@ -14,6 +17,7 @@ function InfoChange(pageName) {
             console.error(error);
         });
 }
+
 
 // **網頁一載入，自動把 a.html 塞進預設頁面**
 document.addEventListener('DOMContentLoaded', () => {
